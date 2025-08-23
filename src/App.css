@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(121.58deg, #131520 30.96%, #000000 113.27%);
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: 'Vesper Bold Large';
+    src: url('./assets/vesper/Vesper-BoldLarge.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Inkognito';
+    src: url('./assets/inkognito/inkognito.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+.logo-seq-container {
+    overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* padding-bottom: 2rem; */
+}
+
+.logo-seq-image {
+  height: 600px;
+  object-fit: contain;
+}
+
+.rendering-soon {
+    /* margin-top: -3rem; */
+    font-family: 'Vesper Bold Large', sans-serif;
+    color: #fff;
+    font-size: 45px;
+}
+
+.socials {
+    margin-top: 3rem;
+}
+
+.socials-header {
+    font-family: Inkognito, sans-serif;
+    color: #fff;
+    font-size: 25px;
+}
+
+.social-links a {
+    font-family: 'Vesper Bold Large', sans-serif;
+    color: #fff;
+    font-size: 28px;
+    text-decoration: none;
+}
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+.grid-img {
+    position: absolute;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .logo-seq-image {
+        height: 400px;
+    }
+    .rendering-soon {
+        font-size: 30px;
+    }
+    .socials-header {
+        font-size: 20px;
+    }
+    .social-links a {
+        font-size: 20px;
+    }
+    
+}
+@media (max-width: 408px) {
+    .logo-seq-image {
+        height: 300px;
+    }
+    .rendering-soon {
+        font-size: 25px;
+    }
+    .socials-header {
+        font-size: 18px;
+    }
+    .social-links a {
+        font-size: 18px;
+    }
+    
+}
+@media (max-width: 300px) {
+    .logo-seq-image {
+        height: 200px;
+    }
+    .rendering-soon {
+        font-size: 20px;
+    }
+    .socials-header {
+        font-size: 16px;
+    }
+    .social-links a {
+        font-size: 16px;
+    }
+}
