@@ -60,8 +60,8 @@ const LogoSeq = () => {
       <div className="socials">
         <div className="socials-header">follow our socials to stay updated</div>
         <div style={{ display: "flex", justifyContent: "space-around" }}>
-          <div className="social-links"><a href=""><FaInstagram /></a></div>
-          <div className="social-links"><a href=""><FaLinkedin /></a></div>
+          <div className="social-links"><a href="https://www.instagram.com/zairza.outr?igsh=MTg0Ymkyejg4bzlzNA=="><FaInstagram /></a></div>
+          <div className="social-links"><a href="https://www.linkedin.com/company/zairza/"><FaLinkedin /></a></div>
         </div>
       </div>
     </div>
