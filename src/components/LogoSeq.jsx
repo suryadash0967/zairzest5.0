@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import grid from "../assets/images/grid.png";
+import LoaderFourDemo from "./Loader";
 
 const LogoSeq = () => {
   const totalFrames = 59;
@@ -42,7 +43,7 @@ const LogoSeq = () => {
   }, [totalFrames, imagesLoaded]);
 
   if (!imagesLoaded) {
-    return <div className="loading">Loading animation...</div>;
+    return <div className="loading"><LoaderFourDemo/></div>;
   }
 
   return (
