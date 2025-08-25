@@ -8,7 +8,7 @@ const LogoSeq = () => {
   // build gif sequence instead of png
   const images = Array.from({ length: totalFrames }, (_, i) => {
     const frameNumber = "1" + String(i).padStart(2, "0"); // 100–159
-    return `/gif-seq/Comp ${frameNumber}.gif`;
+    return `/png seq comp/Comp ${frameNumber}_compressed.png`;
   });
 
   useEffect(() => {
