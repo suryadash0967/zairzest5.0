@@ -7,7 +7,7 @@
 body {
     min-height: 100vh;
     background: linear-gradient(121.58deg, #131520 30.96%, #000000 113.27%);
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 @font-face {
@@ -70,7 +70,7 @@ body {
 
 .grid-img {
     position: absolute;
-    height: 100%;
+    height: 115%;
 }
 
 .loading-animation {
