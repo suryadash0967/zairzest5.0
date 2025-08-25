@@ -16,6 +16,7 @@ body {
     font-weight: bold;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Inkognito';
     src: url('./assets/inkognito/inkognito.otf') format('opentype');
@@ -26,17 +27,16 @@ body {
 
 .logo-seq-container {
     overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  /* padding-bottom: 2rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .logo-seq-image {
-  height: 600px;
-  object-fit: contain;
+    height: 600px;
+    object-fit: contain;
 }
 
 .rendering-soon {
@@ -47,7 +47,8 @@ body {
 }
 
 .socials {
-    margin-top: 3rem;
+    margin: 3rem 0;
+    z-index: 100;
 }
 
 .socials-header {
@@ -62,6 +63,7 @@ body {
     font-size: 28px;
     text-decoration: none;
 }
+
 .social-links a:hover {
     text-decoration: underline;
 }
@@ -71,7 +73,7 @@ body {
     height: 100%;
 }
 
-.loading {
+.loading-animation {
     color: #fff;
     display: flex;
     align-items: center;
@@ -87,42 +89,53 @@ body {
     .logo-seq-image {
         height: 400px;
     }
+
     .rendering-soon {
         font-size: 30px;
     }
+
     .socials-header {
         font-size: 20px;
     }
+
     .social-links a {
         font-size: 20px;
     }
-    
+
 }
+
 @media (max-width: 408px) {
     .logo-seq-image {
         height: 300px;
     }
+
     .rendering-soon {
         font-size: 25px;
     }
+
     .socials-header {
         font-size: 18px;
     }
+
     .social-links a {
         font-size: 18px;
     }
-    
+
 }
+
 @media (max-width: 300px) {
     .logo-seq-image {
         height: 200px;
     }
+
     .rendering-soon {
         font-size: 20px;
     }
+
     .socials-header {
         font-size: 16px;
     }
+
     .social-links a {
         font-size: 16px;
     }

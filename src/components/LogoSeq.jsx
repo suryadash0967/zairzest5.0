@@ -1,6 +1,8 @@
 import { useEffect, useState, useRef } from "react";
 import grid from "../assets/images/grid.png";
 import LoaderFourDemo from "./Loader";
+import { FaInstagram } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa6";
 
 const LogoSeq = () => {
   const totalFrames = 59;
@@ -43,7 +45,7 @@ const LogoSeq = () => {
   }, [totalFrames, imagesLoaded]);
 
   if (!imagesLoaded) {
-    return <div className="loading"><LoaderFourDemo/></div>;
+    return <div className="loading-animation"><LoaderFourDemo/></div>;
   }
 
   return (
@@ -57,9 +59,9 @@ const LogoSeq = () => {
       <div className="rendering-soon">[RENDERING SOON]</div>
       <div className="socials">
         <div className="socials-header">follow our socials to stay updated</div>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <div className="social-links"><a href="">[INSTAGRAM]</a></div>
-          <div className="social-links"><a href="">[LINKEDIN]</a></div>
+        <div style={{ display: "flex", justifyContent: "space-around" }}>
+          <div className="social-links"><a href=""><FaInstagram /></a></div>
+          <div className="social-links"><a href=""><FaLinkedin /></a></div>
         </div>
       </div>
     </div>
