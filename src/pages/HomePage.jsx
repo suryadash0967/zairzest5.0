@@ -1,10 +1,9 @@
 import React from 'react'
+import TopSection from '../components/TopSection'
 
 const HomePage = () => {
   return (
-    <div>
-      
-    </div>
+    <TopSection/>
   )
 }
 
