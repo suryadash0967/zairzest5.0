@@ -1,0 +1,26 @@
+* {
+
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    background-image: url(/bgTop.png);
+    
+}
+
+@font-face {
+    font-family: Cliqey;
+    src: url(/fonts/Cliqey.otf) format("opentype");
+}
+
+
+/* ------------
+    EXPLORE 
+-----------   */
+
+.explore-head {
+    font-family: 'Cliqey', sans-serif;
+    color: #fff;
+    font-size: 25px;
+}

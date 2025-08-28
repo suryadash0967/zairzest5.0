@@ -5,15 +5,15 @@ const TopSection = () => {
     <div
       style={{
         width: '100%',
-        height: '100vh', // or set a specific height if needed
-        backgroundImage: 'url(/bgTop.png)',
+        height: '100vh',
+        backgroundImage: 'url(/images/bgTop.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         position: 'relative',
       }}
     >
-        <img src="/girlBack.png" alt="Baddie" className="mx-auto h-[100vh]"/>
+        <img src="/images/girlBack.png" alt="Baddie" className="mx-auto h-[100vh]"/>
     </div>
   )
 }
