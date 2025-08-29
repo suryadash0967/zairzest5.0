@@ -21,20 +21,20 @@ function Explore() {
       </div>
 
       <div className="tech-fun-wrapper">
-        <div className="events-card">
+        <a className="events-card" href="">
           <img src="/images/techevents.png" alt="" />
           <div className="events-desc">
             <p>Know more about</p>
             <div>TECH EVENTS</div>
           </div>
-        </div>
-        <div className="events-card">
+        </a>
+        <a className="events-card" href="">
           <img src="/images/funevents.png" alt="" />
           <div className="events-desc">
             <p>Know more about</p>
             <div>FUN EVENTS</div>
           </div>
-        </div>
+        </a>
       </div>
 
     </div>

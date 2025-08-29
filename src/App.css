@@ -1,13 +1,22 @@
+:root {
+    --legacy-card-dim: 50%;
+    --legacy-card-height: 15rem;
+}
+
 * {
 
     box-sizing: border-box;
 }
 
 body {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     background-image: url(/bgTop.png);
-    background-color: #000;
+    background-color: #141414;
 }
+
+/* ------------
+    FONTS
+------------ */
 
 @font-face {
     font-family: Cliqey;
@@ -17,6 +26,13 @@ body {
 @font-face {
     font-family: Despina;
     src: url("/fonts/CSDespina-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Molde;
+    src: url("/fonts/Molde-Expanded-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
@@ -37,25 +53,21 @@ body {
     font-weight: 400;
     font-style: normal;
 }
-#five{
+
+#five {
     font-family: 'Cliqey', sans-serif;
     color: #fff;
     font-weight: 400;
     font-style: normal;
 }
 
-/* You can add Bold/ReverseItalic variants similarly */
 
 
-@font-face {
-    font-family: Despina;
-    src: url(/fonts/CSDespina-Regular.ttf) format("trueType");
-}
 
 
-/*  ------------
+/* ------------
     EXPLORE 
------------   */
+------------ */
 
 .explore-wrapper {
     display: flex;
@@ -117,15 +129,177 @@ body {
 
 .events-card:nth-of-type(1) img {
     background: #1a1a1a;
-    box-shadow: 0 0 3px #e9280a99, 0 0 12px #e9280a99, 0 0 15px #e9280a99;
+    box-shadow: 0 0 5px #ffffff40, 0 0 18px #ffffff40, 0 0 25px #ffffff40;
     height: 95%;
+    transition: box-shadow 0.2s ease-in-out;
 }
 
 .events-card:nth-of-type(2) img {
     background: #1a1a1a;
     box-shadow: 0 0 5px #ffffff5e, 0 0 18px #ffffff5e, 0 0 25px #ffffff5e;
     height: 95%;
+    transition: box-shadow 0.2s ease-in-out;
 }
+
+.events-card:nth-of-type(1) img:hover {
+    box-shadow: 0 0 3px #e9280a99, 0 0 12px #e9280a99, 0 0 15px #e9280a99;
+}
+
+.events-card:nth-of-type(2) img:hover {
+    box-shadow: 0 0 3px #e9280a99, 0 0 12px #e9280a99, 0 0 15px #e9280a99;
+}
+
+
+
+
+/* ------------  
+    LEGACY
+-------------- */
+
+.legacy-wrapper {
+    color: #fff;
+    background-color: #141414;
+    padding-top: 1rem;
+    height: fit-content;
+    min-height: 100vh;
+}
+
+.about-zairzest-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-zairzest-head {
+    font-family: "Despina";
+    color: #fff;
+    font-size: 90px;
+    text-align: center;
+}
+
+.about-zairzest-head span {
+    color: #E9270A;
+}
+
+.about-zaiezest-desc {
+    text-align: center;
+    font-family: Molde;
+    color: #fff;
+    font-size: 14px;
+    width: 60%;
+}
+
+.legacy-grid {
+    margin: 4rem 0;
+    font-family: Molde;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* min-height: 100vh; */
+}
+
+.legacy-card {
+    width: var(--legacy-card-dim);
+    height: var(--legacy-card-height);
+    border: 1px solid #fff;
+    border-left: 2px solid #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.legacy-card-bottom {
+    height: fit-content;
+    margin: 0 0 10px 10px;
+}
+
+.card-main {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+}
+
+.legacy-top-grid {
+    display: flex;
+    width: 100%;
+}
+
+.legacy-bottom-grid {
+    display: flex;
+    width: 100%;
+    height: var(--legacy-card-height);
+}
+
+.legacy-top-left {
+    display: flex;
+    width: 50%;
+}
+
+.legacy-bottom-left {
+    display: flex;
+    width: 50%;
+}
+
+.legacy-bottom-right {
+    display: flex;
+    width: 50%;
+}
+
+.legacy-top-right {
+    width: 50%;
+}
+
+.legacy-zairzest-start div:nth-of-type(1) {
+    font-size: 18px;
+}
+
+.legacy-zairzest-start div:nth-of-type(2) {
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  ------------
+  MEDIA QUERIES
+------------- */
+
 
 @media (max-width: 1281px) {
     .events-card:nth-of-type(1) img {
@@ -137,7 +311,7 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 885px) {
     .explore-head {
         font-size: 36px;
         text-align: center;
@@ -179,6 +353,47 @@ body {
     .events-desc div {
         font-size: 20px;
     }
+
+    .card-main {
+        font-size: 22px;
+    }
+
+    .legacy-card-bottom {
+        font-size: 13px;
+    }
+
+    .legacy-top-grid,
+    .legacy-bottom-grid {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    :root {
+        --legacy-card-height: 12rem;
+        --legacy-card-dim: 100%;
+    }
+
+    .legacy-card {
+        width: var(--legacy-card-dim);
+        max-width: 100%;
+    }
+
+    .legacy-top-left,
+    .legacy-top-right,
+    .legacy-bottom-left,
+    .legacy-bottom-right {
+        width: 100%;
+    }
+
+    .about-zairzest-head {
+        font-size: 60px;
+    }
+
+    .about-zaiezest-desc {
+        width: 80%;
+        font-size: 12px;
+    }
+
 
 
 }
