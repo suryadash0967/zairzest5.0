@@ -13,6 +13,32 @@ body {
     font-family: Cliqey;
     src: url(/fonts/Cliqey.otf) format("opentype");
 }
+@font-face {
+  font-family: Despina;
+  src: url("/fonts/CSDespina-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+#zairzest {
+    font-family: 'Despina', sans-serif;
+    color: #fff;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#zairzestunfill{
+    font-family: 'Despina', sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* You can add Bold/ReverseItalic variants similarly */
+
 
 
 /* ------------
