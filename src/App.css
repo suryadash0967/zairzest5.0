@@ -6,7 +6,7 @@
 body {
     overflow-x: hidden;
     background-image: url(/bgTop.png);
-    
+    background-color: #000;
 }
 
 @font-face {
@@ -14,13 +14,113 @@ body {
     src: url(/fonts/Cliqey.otf) format("opentype");
 }
 
+@font-face {
+    font-family: Despina;
+    src: url(/fonts/CSDespina-Regular.ttf) format("trueType");
+}
 
-/* ------------
+
+/*  ------------
     EXPLORE 
 -----------   */
+
+.explore-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh
+}
 
 .explore-head {
     font-family: 'Cliqey', sans-serif;
     color: #fff;
-    font-size: 25px;
+    font-size: 45px;
+}
+
+.explore-desc {
+    font-family: 'Space Grotesk';
+    color: #fff;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 45%;
+    text-align: center;
+}
+
+.tech-fun-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: max-content;
+    height: 300px;
+    margin-top: 2rem;
+}
+
+.events-desc {
+    color: #fff;
+    margin-top: -6rem;
+    margin-left: 1.8rem;
+    z-index: 10;
+    background-color: #ffffff15;
+    backdrop-filter: blur(3px);
+    width: fit-content;
+    padding: 3px 10px;
+}
+
+.events-desc p {
+    font-family: "Space Grotesk";
+}
+
+.events-desc div {
+    font-family: "Despina";
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+.events-card {
+    height: 100%;
+}
+
+.events-card:nth-of-type(1) img {
+    background: #1a1a1a;
+    box-shadow: 0 0 3px #e9280a99, 0 0 12px #e9280a99, 0 0 15px #e9280a99;
+    height: 95%;
+}
+
+.events-card:nth-of-type(2) img {
+    background: #1a1a1a;
+    box-shadow: 0 0 5px #ffffff5e, 0 0 18px #ffffff5e, 0 0 25px #ffffff5e;
+    height: 95%;
+}
+
+@media (max-width: 1060px) {
+    .tech-fun-wrapper {
+        flex-direction: column;
+        height: max-content;
+        gap: 2rem;
+        margin-top: 1rem;
+        width: fit-content;
+    }
+}
+
+@media (max-width: 768px) {
+    .explore-head {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .explore-desc {
+        width: 70%;
+        font-size: 14px;
+    }
+
+    .events-desc {
+        font-size: 14px;
+    }
+
+    .events-desc div {
+        font-size: 24px;
+    }
+
 }
