@@ -13,7 +13,9 @@ const TopSection = () => {
         position: 'relative',
       }}
     >
-        <img src="/images/girlBack.png" alt="Baddie" className="mx-auto h-[100vh]"/>
+        <img src="/images/girlBack.png" alt="Baddie" className="relative mx-auto h-[100vh] z-20"/>
+        <img src="/images/zairzestUnfill.png" alt="" className='absolute top-[15%] md:h-[350px] left-[10%] right-[10%] z-40' />
+        <img src="/images/zairzestFill.png" alt="" className='absolute top-[15%] md:h-[350px] left-[10%] z-10' />
     </div>
   )
 }
