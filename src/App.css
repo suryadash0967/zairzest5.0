@@ -13,11 +13,12 @@ body {
     font-family: Cliqey;
     src: url(/fonts/Cliqey.otf) format("opentype");
 }
+
 @font-face {
-  font-family: Despina;
-  src: url("/fonts/CSDespina-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+    font-family: Despina;
+    src: url("/fonts/CSDespina-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
 
@@ -29,7 +30,7 @@ body {
     font-style: normal;
 }
 
-#zairzestunfill{
+#zairzestunfill {
     font-family: 'Despina', sans-serif;
     color: transparent;
     -webkit-text-stroke: 1px #fff;
@@ -79,7 +80,7 @@ body {
     justify-content: center;
     gap: 3rem;
     width: max-content;
-    height: 300px;
+    height: fit-content;
     margin-top: 2rem;
 }
 
@@ -120,13 +121,13 @@ body {
     height: 95%;
 }
 
-@media (max-width: 1060px) {
-    .tech-fun-wrapper {
-        flex-direction: column;
-        height: max-content;
-        gap: 2rem;
-        margin-top: 1rem;
-        width: fit-content;
+@media (max-width: 1281px) {
+    .events-card:nth-of-type(1) img {
+        height: 75%;
+    }
+
+    .events-card:nth-of-type(2) img {
+        height: 75%;
     }
 }
 
@@ -134,6 +135,19 @@ body {
     .explore-head {
         font-size: 36px;
         text-align: center;
+        margin-top: 9rem;
+    }
+
+    .events-card:nth-of-type(1) img {
+        height: 65%;
+    }
+
+    .events-card:nth-of-type(2) img {
+        height: 65%;
+    }
+
+    .events-card:nth-of-type(2) {
+        margin-top: -5rem;
     }
 
     .explore-desc {
@@ -141,12 +155,40 @@ body {
         font-size: 14px;
     }
 
+    .tech-fun-wrapper {
+        flex-direction: column;
+        height: min-content;
+        gap: 0rem;
+        margin-top: 1rem;
+        width: fit-content;
+    }
+
     .events-desc {
-        font-size: 14px;
+        font-size: 10px;
+        margin-top: -4rem;
+        margin-left: 0.8rem;
+
     }
 
     .events-desc div {
-        font-size: 24px;
+        font-size: 20px;
     }
 
+
+}
+
+
+@media (max-width: 500px) {
+    .explore-head {
+        font-size: 26px;
+    }
+
+    .explore-desc {
+        width: 70%;
+        font-size: 12px;
+    }
+
+    .events-card:nth-of-type(2) {
+        margin-top: -3rem;
+    }
 }
