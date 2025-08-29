@@ -24,7 +24,7 @@ const TopSection = () => {
         <div id='zairzestunfill' className='absolute  top-0 w-full text-center z-20 md:text-[200px] lg:text-[360px] xl:text-[420px] '>
             ZAIRZEST
         </div>
-        <div id="topb" className='flex flex-col-reverse lg:flex-row absolute top-3/4 left-0 right-0 justify-center gap-20 items-center z-30'>
+        <div id="topb" className='flex flex-col-reverse lg:flex-row absolute top-3/4 left-0 right-0 justify-center gap-40 items-center z-30'>
         <div id="yap" className='text-left text-white w-[380px] backdrop-blur-2xl z-30 hidden lg:block'>
 
 
