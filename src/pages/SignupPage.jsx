@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import { FaEyeSlash } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const SignupPage = () => {
   const [bgImage, setBgImage] = useState("/images/register.png");
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     // function to set image based on screen size
@@ -135,7 +137,7 @@ const SignupPage = () => {
               <div className="w-full molde_ text-left text-white/80 text-xs mt-2">
                 Already have an account?{" "}
                 <a
-                  href="/login"
+                  onClick={() => navigate("/login")}
                   className="font-semibold text-orange-500 hover:text-orange-400 transition-colors underline decoration-orange-500/50 hover:decoration-orange-400"
                 >
                   Login

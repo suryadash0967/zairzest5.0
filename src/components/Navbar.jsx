@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Show navbar immediately on pages other than home
@@ -40,19 +41,19 @@ const Navbar = () => {
       }`}
     >
       <li className="flex flex-row gap-60 pt-6 text-3xl">
-        <a className="cursor-pointer" onClick={useNavigate("/")}>
+        <a className="cursor-pointer" onClick={() => navigate("/")}>
           Home
         </a>
-        <a className="cursor-pointer" onClick={useNavigate("/#events")}>
+        <a className="cursor-pointer" onClick={() => navigate("/#events")}>
           Events
         </a>
         <a
           className="cursor-pointer whitespace-nowrap"
-          onClick={useNavigate("/#about")}
+          onClick={() => navigate("/#about")}
         >
           About Us
         </a>
-        <a className="cursor-pointer" onClick={useNavigate("/register")}>
+        <a className="cursor-pointer" onClick={() => navigate("/register")}>
           Register
         </a>
       </li>
