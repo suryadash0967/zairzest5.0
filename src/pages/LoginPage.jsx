@@ -7,6 +7,9 @@ import { useNavigate } from "react-router-dom";
 const LoginPage = () => {
   const [bgImage, setBgImage] = useState("/images/login.png");
   const [showPassword, setShowPassword] = useState(false);
+  // Form field states
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -27,6 +30,11 @@ const LoginPage = () => {
     // cleanup
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  const onLogin = (e) => {
+    e.preventDefault();
+    // Handle login logic here
+  };
   return (
     <>
       <Navbar />
@@ -73,11 +81,13 @@ const LoginPage = () => {
               </p>
             </div>
 
-            <form className="w-full flex flex-col gap-3">
+            <form className="w-full flex flex-col gap-3" onSubmit={onLogin}>
               <div className="relative w-full molde_">
                 <input
                   type="email"
                   placeholder="Email ID"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="w-full rounded-md border-2 border-white/30  px-3 py-2.5 text-sm text-white placeholder-white/60 outline-none transition-all duration-300 focus:border-orange-500 focus:bg-white/10 focus:shadow-lg hover:border-white/50"
                 />
               </div>
@@ -86,6 +96,8 @@ const LoginPage = () => {
                 <input
                   type={showPassword ? "text" : "password"}
                   placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   className="w-full rounded-md border-2 border-white/30  px-3 py-2.5 pr-10 text-sm text-white placeholder-white/60 outline-none transition-all duration-300 focus:border-orange-500 focus:bg-white/10 focus:shadow-lg hover:border-white/50"
                 />
                 <button

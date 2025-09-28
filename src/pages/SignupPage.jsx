@@ -7,6 +7,12 @@ import { useNavigate } from "react-router-dom";
 const SignupPage = () => {
   const [bgImage, setBgImage] = useState("/images/register.png");
   const [showPassword, setShowPassword] = useState(false);
+  // Form field states
+  const [name, setName] = useState("");
+  const [regdNo, setRegdNo] = useState("");
+  const [gender, setGender] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -27,6 +33,11 @@ const SignupPage = () => {
     // cleanup
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  const onRegister = (e) => {
+    e.preventDefault();
+    // Handle registration logic here
+  };
   return (
     <>
       <Navbar />
@@ -74,11 +85,13 @@ const SignupPage = () => {
               </p>
             </div>
 
-            <form className="w-full flex flex-col gap-3">
+            <form className="w-full flex flex-col gap-3" onSubmit={onRegister}>
               <div className="relative w-full molde_">
                 <input
                   type="text"
                   placeholder="Name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   className="w-full rounded-md border-2 border-white/30  px-3 py-2.5 text-sm text-white placeholder-white/60 outline-none transition-all duration-300 focus:border-orange-500 focus:bg-white/10 focus:shadow-lg hover:border-white/50"
                 />
               </div>
@@ -88,11 +101,17 @@ const SignupPage = () => {
                   <input
                     type="text"
                     placeholder="Regd No."
+                    value={regdNo}
+                    onChange={(e) => setRegdNo(e.target.value)}
                     className="w-full rounded-md border-2 border-white/30  px-3 py-2.5 text-sm text-white placeholder-white/60 outline-none transition-all duration-300 focus:border-orange-500 focus:bg-white/10 focus:shadow-lg hover:border-white/50"
                   />
                 </div>
                 <div className="relative flex-1 molde_ px-0.5">
-                  <select className="w-full rounded-md border-2 border-white/30  px-3 py-2.5 text-sm text-white/50 outline-none transition-all duration-300 focus:border-orange-500 focus:bg-white/10 focus:shadow-lg hover:border-white/50">
+                  <select
+                    value={gender}
+                    onChange={(e) => setGender(e.target.value)}
+                    className="w-full rounded-md border-2 border-white/30  px-3 py-2.5 text-sm text-white/50 outline-none transition-all duration-300 focus:border-orange-500 focus:bg-white/10 focus:shadow-lg hover:border-white/50"
+                  >
                     <option value="" className="bg-gray-800">
                       Gender
                     </option>
@@ -113,6 +132,8 @@ const SignupPage = () => {
                 <input
                   type="email"
                   placeholder="Email ID"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="w-full rounded-md border-2 border-white/30  px-3 py-2.5 text-sm text-white placeholder-white/60 outline-none transition-all duration-300 focus:border-orange-500 focus:bg-white/10 focus:shadow-lg hover:border-white/50"
                 />
               </div>
@@ -121,6 +142,8 @@ const SignupPage = () => {
                 <input
                   type={showPassword ? "text" : "password"}
                   placeholder="Create your own Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   className="w-full rounded-md border-2 border-white/30  px-3 py-2.5 pr-10 text-sm text-white placeholder-white/60 outline-none transition-all duration-300 focus:border-orange-500 focus:bg-white/10 focus:shadow-lg hover:border-white/50"
                 />
                 <button
