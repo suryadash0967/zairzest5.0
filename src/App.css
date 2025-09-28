@@ -1,17 +1,16 @@
 :root {
-    --legacy-card-dim: 50%;
-    --legacy-card-height: 15rem;
+  --legacy-card-dim: 50%;
+  --legacy-card-height: 15rem;
 }
 
 * {
-
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    /* overflow-x: hidden; */
-    background-image: url(/bgTop.png);
-    background-color: #141414;
+  /* overflow-x: hidden; */
+  background-image: url(/bgTop.png);
+  background-color: #141414;
 }
 
 /* ------------
@@ -19,409 +18,369 @@ body {
 ------------ */
 
 @font-face {
-    font-family: Cliqey;
-    src: url(/fonts/Cliqey.otf) format("opentype");
+  font-family: Cliqey;
+  src: url(/fonts/Cliqey.otf) format("opentype");
 }
 
 @font-face {
-    font-family: Despina;
-    src: url("/fonts/CSDespina-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
+  font-family: Despina;
+  src: url("/fonts/CSDespina-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: Molde;
-    src: url("/fonts/Molde-Expanded-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
+  font-family: Molde;
+  src: url("/fonts/Molde-Expanded-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-
+/* fonts */
+.despina_ {
+  font-family: "Despina", sans-serif;
+}
+.molde_ {
+  font-family: "Molde", sans-serif;
+}
+.cliqey_ {
+  font-family: "Cliqey", sans-serif;
+}
+/* fonts  */
 
 #zairzest {
-    font-family: 'Despina', sans-serif;
-    color: #fff;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Despina", sans-serif;
+  color: #fff;
+  font-weight: 400;
+  font-style: normal;
 }
 
 #zairzestunfill {
-    font-family: 'Despina', sans-serif;
-    color: transparent;
-    -webkit-text-stroke: 1px #fff;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Despina", sans-serif;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  font-weight: 400;
+  font-style: normal;
 }
 
 #five {
-    font-family: 'Cliqey', sans-serif;
-    color: #fff;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Cliqey", sans-serif;
+  color: #fff;
+  font-weight: 400;
+  font-style: normal;
 }
-#fivebelow{
-    font-family: 'Cliqey', sans-serif;
-    color: #fff;
-    font-weight: 400;
-    font-style: normal;
+#fivebelow {
+  font-family: "Cliqey", sans-serif;
+  color: #fff;
+  font-weight: 400;
+  font-style: normal;
 }
-#molde{
-    font-family: 'Molde', sans-serif;
-    color: #fff;
-    font-weight: 400;
-    font-style: normal;
+#molde {
+  font-family: "Molde", sans-serif;
+  color: #fff;
+  font-weight: 400;
+  font-style: normal;
 }
-
-
-
-
 
 /* ------------
     EXPLORE 
 ------------ */
 
 .explore-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100vh
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .explore-head {
-    font-family: 'Cliqey', sans-serif;
-    color: #fff;
-    font-size: 45px;
+  font-family: "Cliqey", sans-serif;
+  color: #fff;
+  font-size: 45px;
 }
 
 .explore-desc {
-    font-family: 'Space Grotesk';
-    color: #fff;
-    font-size: 16px;
-    margin-top: 10px;
-    width: 45%;
-    text-align: center;
+  font-family: "Space Grotesk";
+  color: #fff;
+  font-size: 16px;
+  margin-top: 10px;
+  width: 45%;
+  text-align: center;
 }
 
 .tech-fun-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    width: max-content;
-    height: fit-content;
-    margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  width: max-content;
+  height: fit-content;
+  margin-top: 2rem;
 }
 
 .events-desc {
-    color: #fff;
-    margin-top: -6rem;
-    margin-left: 1.8rem;
-    z-index: 10;
-    background-color: #ffffff15;
-    backdrop-filter: blur(3px);
-    width: fit-content;
-    padding: 3px 10px;
+  color: #fff;
+  margin-top: -6rem;
+  margin-left: 1.8rem;
+  z-index: 10;
+  background-color: #ffffff15;
+  backdrop-filter: blur(3px);
+  width: fit-content;
+  padding: 3px 10px;
 }
 
 .events-desc p {
-    font-family: "Space Grotesk";
+  font-family: "Space Grotesk";
 }
 
 .events-desc div {
-    font-family: "Despina";
-    font-size: 30px;
-    letter-spacing: 1px;
+  font-family: "Despina";
+  font-size: 30px;
+  letter-spacing: 1px;
 }
 
 .events-card {
-    height: 100%;
+  height: 100%;
 }
 
 .events-card:nth-of-type(1) img {
-    background: #1a1a1a;
-    box-shadow: 0 0 5px #ffffff40, 0 0 18px #ffffff40, 0 0 25px #ffffff40;
-    height: 95%;
-    transition: box-shadow 0.2s ease-in-out;
+  background: #1a1a1a;
+  box-shadow: 0 0 5px #ffffff40, 0 0 18px #ffffff40, 0 0 25px #ffffff40;
+  height: 95%;
+  transition: box-shadow 0.2s ease-in-out;
 }
 
 .events-card:nth-of-type(2) img {
-    background: #1a1a1a;
-    box-shadow: 0 0 5px #ffffff5e, 0 0 18px #ffffff5e, 0 0 25px #ffffff5e;
-    height: 95%;
-    transition: box-shadow 0.2s ease-in-out;
+  background: #1a1a1a;
+  box-shadow: 0 0 5px #ffffff5e, 0 0 18px #ffffff5e, 0 0 25px #ffffff5e;
+  height: 95%;
+  transition: box-shadow 0.2s ease-in-out;
 }
 
 .events-card:nth-of-type(1) img:hover {
-    box-shadow: 0 0 3px #e9280a99, 0 0 12px #e9280a99, 0 0 15px #e9280a99;
+  box-shadow: 0 0 3px #e9280a99, 0 0 12px #e9280a99, 0 0 15px #e9280a99;
 }
 
 .events-card:nth-of-type(2) img:hover {
-    box-shadow: 0 0 3px #e9280a99, 0 0 12px #e9280a99, 0 0 15px #e9280a99;
+  box-shadow: 0 0 3px #e9280a99, 0 0 12px #e9280a99, 0 0 15px #e9280a99;
 }
-
-
-
 
 /* ------------  
     LEGACY
 -------------- */
 
 .legacy-wrapper {
-    color: #fff;
-    background-color: #141414;
-    padding-top: 1rem;
-    height: fit-content;
-    min-height: 100vh;
+  color: #fff;
+  background-color: #141414;
+  padding-top: 1rem;
+  height: fit-content;
+  min-height: 100vh;
 }
 
 .about-zairzest-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .about-zairzest-head {
-    font-family: "Despina";
-    color: #fff;
-    font-size: 90px;
-    text-align: center;
+  font-family: "Despina";
+  color: #fff;
+  font-size: 90px;
+  text-align: center;
 }
 
 .about-zairzest-head span {
-    color: #E9270A;
+  color: #e9270a;
 }
 
 .about-zaiezest-desc {
-    text-align: center;
-    font-family: Molde;
-    color: #fff;
-    font-size: 14px;
-    width: 60%;
+  text-align: center;
+  font-family: Molde;
+  color: #fff;
+  font-size: 14px;
+  width: 60%;
 }
 
 .legacy-grid {
-    margin: 4rem 0;
-    font-family: Molde;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    /* min-height: 100vh; */
+  margin: 4rem 0;
+  font-family: Molde;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* min-height: 100vh; */
 }
 
 .legacy-card {
-    width: var(--legacy-card-dim);
-    height: var(--legacy-card-height);
-    border: 1px solid #fff;
-    border-left: 2px solid #fff;
-    display: flex;
-    flex-direction: column;
+  width: var(--legacy-card-dim);
+  height: var(--legacy-card-height);
+  border: 1px solid #fff;
+  border-left: 2px solid #fff;
+  display: flex;
+  flex-direction: column;
 }
 
-
 .legacy-card-bottom {
-    height: fit-content;
-    margin: 0 0 10px 10px;
+  height: fit-content;
+  margin: 0 0 10px 10px;
 }
 
 .card-main {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 34px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
 }
 
 .legacy-top-grid {
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 }
 
 .legacy-bottom-grid {
-    display: flex;
-    width: 100%;
-    height: var(--legacy-card-height);
+  display: flex;
+  width: 100%;
+  height: var(--legacy-card-height);
 }
 
 .legacy-top-left {
-    display: flex;
-    width: 50%;
+  display: flex;
+  width: 50%;
 }
 
 .legacy-bottom-left {
-    display: flex;
-    width: 50%;
+  display: flex;
+  width: 50%;
 }
 
 .legacy-bottom-right {
-    display: flex;
-    width: 50%;
+  display: flex;
+  width: 50%;
 }
 
 .legacy-top-right {
-    width: 50%;
+  width: 50%;
 }
 
 .legacy-zairzest-start div:nth-of-type(1) {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .legacy-zairzest-start div:nth-of-type(2) {
-    font-size: 14px;
+  font-size: 14px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*  ------------
   MEDIA QUERIES
 ------------- */
 
-
 @media (max-width: 1281px) {
-    .events-card:nth-of-type(1) img {
-        height: 75%;
-    }
+  .events-card:nth-of-type(1) img {
+    height: 75%;
+  }
 
-    .events-card:nth-of-type(2) img {
-        height: 75%;
-    }
+  .events-card:nth-of-type(2) img {
+    height: 75%;
+  }
 }
 
 @media (max-width: 885px) {
-    .explore-head {
-        font-size: 36px;
-        text-align: center;
-        margin-top: 9rem;
-    }
+  .explore-head {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 9rem;
+  }
 
-    .events-card:nth-of-type(1) img {
-        height: 65%;
-    }
+  .events-card:nth-of-type(1) img {
+    height: 65%;
+  }
 
-    .events-card:nth-of-type(2) img {
-        height: 65%;
-    }
+  .events-card:nth-of-type(2) img {
+    height: 65%;
+  }
 
-    .events-card:nth-of-type(2) {
-        margin-top: -5rem;
-    }
+  .events-card:nth-of-type(2) {
+    margin-top: -5rem;
+  }
 
-    .explore-desc {
-        width: 70%;
-        font-size: 14px;
-    }
+  .explore-desc {
+    width: 70%;
+    font-size: 14px;
+  }
 
-    .tech-fun-wrapper {
-        flex-direction: column;
-        height: min-content;
-        gap: 0rem;
-        margin-top: 1rem;
-        width: fit-content;
-    }
+  .tech-fun-wrapper {
+    flex-direction: column;
+    height: min-content;
+    gap: 0rem;
+    margin-top: 1rem;
+    width: fit-content;
+  }
 
-    .events-desc {
-        font-size: 10px;
-        margin-top: -4rem;
-        margin-left: 0.8rem;
+  .events-desc {
+    font-size: 10px;
+    margin-top: -4rem;
+    margin-left: 0.8rem;
+  }
 
-    }
+  .events-desc div {
+    font-size: 20px;
+  }
 
-    .events-desc div {
-        font-size: 20px;
-    }
+  .card-main {
+    font-size: 22px;
+  }
 
-    .card-main {
-        font-size: 22px;
-    }
+  .legacy-card-bottom {
+    font-size: 13px;
+  }
 
-    .legacy-card-bottom {
-        font-size: 13px;
-    }
+  .legacy-top-grid,
+  .legacy-bottom-grid {
+    flex-direction: column;
+    width: 100%;
+  }
 
-    .legacy-top-grid,
-    .legacy-bottom-grid {
-        flex-direction: column;
-        width: 100%;
-    }
+  :root {
+    --legacy-card-height: 12rem;
+    --legacy-card-dim: 100%;
+  }
 
-    :root {
-        --legacy-card-height: 12rem;
-        --legacy-card-dim: 100%;
-    }
+  .legacy-card {
+    width: var(--legacy-card-dim);
+    max-width: 100%;
+  }
 
-    .legacy-card {
-        width: var(--legacy-card-dim);
-        max-width: 100%;
-    }
+  .legacy-top-left,
+  .legacy-top-right,
+  .legacy-bottom-left,
+  .legacy-bottom-right {
+    width: 100%;
+  }
 
-    .legacy-top-left,
-    .legacy-top-right,
-    .legacy-bottom-left,
-    .legacy-bottom-right {
-        width: 100%;
-    }
+  .about-zairzest-head {
+    font-size: 60px;
+  }
 
-    .about-zairzest-head {
-        font-size: 60px;
-    }
-
-    .about-zaiezest-desc {
-        width: 80%;
-        font-size: 12px;
-    }
-
-
-
+  .about-zaiezest-desc {
+    width: 80%;
+    font-size: 12px;
+  }
 }
 
-
 @media (max-width: 500px) {
-    .explore-head {
-        font-size: 26px;
-    }
+  .explore-head {
+    font-size: 26px;
+  }
 
-    .explore-desc {
-        width: 70%;
-        font-size: 12px;
-    }
+  .explore-desc {
+    width: 70%;
+    font-size: 12px;
+  }
 
-    .events-card:nth-of-type(2) {
-        margin-top: -3rem;
-    }
+  .events-card:nth-of-type(2) {
+    margin-top: -3rem;
+  }
 }
