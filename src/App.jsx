@@ -15,7 +15,6 @@ const TechEventsPage = lazy(() => import("./pages/TechEvents"));
 function App() {
   const location = useLocation();
 
-  // Pages where you don’t want the footer
   const hideFooterRoutes = ["/fun-events", "/tech-events"];
   const shouldShowFooter = !hideFooterRoutes.includes(location.pathname);
 

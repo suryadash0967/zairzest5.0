@@ -8,7 +8,6 @@ function Explore() {
       className="explore-wrapper"
       style={{
         width: '100%',
-        height: '100vh',
         backgroundImage: 'url(/images/explore_page_combined.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',

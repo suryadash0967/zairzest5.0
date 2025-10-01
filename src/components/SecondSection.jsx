@@ -27,7 +27,7 @@ const SecondSection = () => {
     <>
       <Navbar />
       <div
-        className="w-full h-[100vh] text-white relative"
+        className="w-full h-[125vh] lg:h-[100vh] text-white relative"
         style={{
           backgroundImage: `url(${bgImage})`,
           backgroundSize: 'cover',
@@ -43,9 +43,9 @@ const SecondSection = () => {
             id="biometric"
             src="/images/zenchar.png"
             alt=""
-            className="lg:w-[30vw] w-[60vw]"
+            className="w-[80vw] sm:w-[70vw] md:w-[50vw] lg:w-[30vw] mb-[2rem] lg:mb-[0]"
           />
-          <div id="molde" className="w-[80vw] lg:w-[40vw]">
+          <div id="molde" className="w-[83vw] lg:w-[40vw]">
             The Architect is dead but The code still runs, and the network hums
             on ---- a system without Operators..And in the silence left behind,
             a new question has begun to echo through the network: what is our

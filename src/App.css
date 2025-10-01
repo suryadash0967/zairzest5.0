@@ -119,7 +119,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
+  height: 110vh;
 }
 
 .explore-head {
@@ -301,119 +301,6 @@ body {
 .legacy-zairzest-start div:nth-of-type(2) {
   font-size: 14px;
 }
-
-/*  ------------
-  MEDIA QUERIES
-------------- */
-
-@media (max-width: 1281px) {
-  .events-card:nth-of-type(1) img {
-    height: 75%;
-  }
-
-  .events-card:nth-of-type(2) img {
-    height: 75%;
-  }
-}
-
-@media (max-width: 885px) {
-  .explore-head {
-    font-size: 36px;
-    text-align: center;
-    margin-top: 9rem;
-  }
-
-  .events-card:nth-of-type(1) img {
-    height: 65%;
-  }
-
-  .events-card:nth-of-type(2) img {
-    height: 65%;
-  }
-
-  .events-card:nth-of-type(2) {
-    margin-top: -5rem;
-  }
-
-  .explore-desc {
-    width: 70%;
-    font-size: 14px;
-  }
-
-  .tech-fun-wrapper {
-    flex-direction: column;
-    height: min-content;
-    gap: 0rem;
-    margin-top: 1rem;
-    width: fit-content;
-  }
-
-  .events-desc {
-    font-size: 10px;
-    margin-top: -4rem;
-    margin-left: 0.8rem;
-  }
-
-  .events-desc div {
-    font-size: 20px;
-  }
-
-  .card-main {
-    font-size: 22px;
-  }
-
-  .legacy-card-bottom {
-    font-size: 13px;
-  }
-
-  .legacy-top-grid,
-  .legacy-bottom-grid {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  :root {
-    --legacy-card-height: 12rem;
-    --legacy-card-dim: 100%;
-  }
-
-  .legacy-card {
-    width: var(--legacy-card-dim);
-    max-width: 100%;
-  }
-
-  .legacy-top-left,
-  .legacy-top-right,
-  .legacy-bottom-left,
-  .legacy-bottom-right {
-    width: 100%;
-  }
-
-  .about-zairzest-head {
-    font-size: 60px;
-  }
-
-  .about-zaiezest-desc {
-    width: 80%;
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 500px) {
-  .explore-head {
-    font-size: 26px;
-  }
-
-  .explore-desc {
-    width: 70%;
-    font-size: 12px;
-  }
-
-  .events-card:nth-of-type(2) {
-    margin-top: -3rem;
-  }
-}
-
 
 /*  ------------
     PROFILE
@@ -653,82 +540,6 @@ body {
 .note {
   font-family: Space Grotesk;
   margin-top: 1rem;
-}
-
-@media (max-width: 850px) {
-  .profile-page-wrapper {
-    flex-direction: column;
-    height: fit-content;
-    gap: 1rem;
-  }
-
-  .profile-right-container {
-    justify-content: center;
-    align-items: center;
-  }
-
-  .left-img-wrapper,
-  .profile-img-desc {
-    top: 2rem;
-  }
-
-  .left-img-wrapper {
-    width: 290px;
-  }
-
-  .profile-img-mf {
-    height: 200px;
-  }
-
-  .qrcode,
-  .realid,
-  .glow-border,
-  .zenid-wrapper {
-    width: 65%;
-  }
-
-  .zenid-num {
-    font-size: 24px;
-  }
-
-  .flip-text {
-    font-size: 9px;
-  }
-
-  .realid-left {
-    font-size: 15px;
-  }
-
-  .realid-right {
-    font-size: 30px;
-  }
-
-  .profile-left-container {
-    height: 520px;
-  }
-
-  .welcome {
-    font-size: 40px;
-  }
-
-  .creds {
-    font-size: 24px;
-    /* margin-top: 1px; */
-    line-height: 60px;
-    text-align: center;
-  }
-
-  .name,
-  .zenid-right,
-  .avatar {
-    font-size: 16px;
-  }
-
-  .whatsapp-btn,
-  .events-btn {
-    letter-spacing: 2px;
-    font-size: 20px;
-  }
 }
 
 /* -----------
@@ -1004,44 +815,6 @@ body {
   cursor: unset;
 }
 
-@media (max-width: 850px) {
-  .event-card-image {
-    width: 241px;
-  }
-
-  .events-page-wrapper .profile-img-desc {
-    top: 4.9rem;
-  }
-
-  .date-time,
-  .venue {
-    font-size: 11px;
-  }
-
-
-  .event-name {
-    font-family: Space Grotesk;
-    font-size: 11px;
-  }
-
-  .info-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #5061FF;
-  }
-
-  .info-btn i {
-    font-size: 17px;
-    cursor: pointer;
-  }
-
-  .events-head {
-    font-size: 60px;
-  }
-
-}
-
 /* ---------
     FOOTER
 ---------- */
@@ -1120,6 +893,123 @@ body {
 }
 
 
+/*  ------------
+  MEDIA QUERIES
+------------- */
+
+@media (max-width: 1281px) {
+  .events-card:nth-of-type(1) img {
+    height: 85%;
+  }
+
+  .events-card:nth-of-type(2) img {
+    height: 85%;
+  }
+}
+
+@media (max-width: 885px) {
+  .explore-wrapper {
+    height: 110vh;
+  }
+
+  .explore-head {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .explore-desc {
+    width: 70%;
+    font-size: 14px;
+  }
+  
+  .events-card:nth-of-type(1) img {
+    height: 85%;
+  }
+
+  .events-card:nth-of-type(2) img {
+    height: 85%;
+  }
+
+  .events-card:nth-of-type(2) {
+    margin-top: -5rem;
+  }
+
+
+  .tech-fun-wrapper {
+    flex-direction: column;
+    height: min-content;
+    margin-top: 1rem;
+    width: fit-content;
+  }
+
+  .events-desc {
+    font-size: 10px;
+    margin-top: -4rem;
+    margin-left: 0.8rem;
+  }
+
+  .events-desc div {
+    font-size: 20px;
+  }
+
+  .card-main {
+    font-size: 22px;
+  }
+
+  .legacy-card-bottom {
+    font-size: 13px;
+  }
+
+  .legacy-top-grid,
+  .legacy-bottom-grid {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  :root {
+    --legacy-card-height: 12rem;
+    --legacy-card-dim: 100%;
+  }
+
+  .legacy-card {
+    width: var(--legacy-card-dim);
+    max-width: 100%;
+  }
+
+  .legacy-top-left,
+  .legacy-top-right,
+  .legacy-bottom-left,
+  .legacy-bottom-right {
+    width: 100%;
+  }
+
+  .about-zairzest-head {
+    font-size: 60px;
+  }
+
+  .about-zaiezest-desc {
+    width: 90%;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  .explore-wrapper {
+    height: 100vh;
+  }
+  .explore-head {
+    font-size: 26px;
+  }
+
+  .explore-desc {
+    width: 70%;
+    font-size: 12px;
+  }
+
+  .events-card:nth-of-type(2) {
+    margin-top: -3rem;
+  }
+}
 
 @media (max-width: 1000px) {
 
@@ -1171,12 +1061,124 @@ body {
     gap: 1rem;
     padding-bottom: 1rem;
   }
+}
 
 
+@media (max-width: 850px) {
+  .event-card-image {
+    width: 241px;
+  }
+
+  .events-page-wrapper .profile-img-desc {
+    top: 4.9rem;
+  }
+
+  .date-time,
+  .venue {
+    font-size: 11px;
+  }
 
 
+  .event-name {
+    font-family: Space Grotesk;
+    font-size: 11px;
+  }
+
+  .info-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5061FF;
+  }
+
+  .info-btn i {
+    font-size: 17px;
+    cursor: pointer;
+  }
+
+  .events-head {
+    font-size: 60px;
+  }
 
 }
+
+
+@media (max-width: 850px) {
+  .profile-page-wrapper {
+    flex-direction: column;
+    height: fit-content;
+    gap: 1rem;
+  }
+
+  .profile-right-container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left-img-wrapper,
+  .profile-img-desc {
+    top: 2rem;
+  }
+
+  .left-img-wrapper {
+    width: 290px;
+  }
+
+  .profile-img-mf {
+    height: 200px;
+  }
+
+  .qrcode,
+  .realid,
+  .glow-border,
+  .zenid-wrapper {
+    width: 65%;
+  }
+
+  .zenid-num {
+    font-size: 24px;
+  }
+
+  .flip-text {
+    font-size: 9px;
+  }
+
+  .realid-left {
+    font-size: 15px;
+  }
+
+  .realid-right {
+    font-size: 30px;
+  }
+
+  .profile-left-container {
+    height: 520px;
+  }
+
+  .welcome {
+    font-size: 40px;
+  }
+
+  .creds {
+    font-size: 24px;
+    /* margin-top: 1px; */
+    line-height: 60px;
+    text-align: center;
+  }
+
+  .name,
+  .zenid-right,
+  .avatar {
+    font-size: 16px;
+  }
+
+  .whatsapp-btn,
+  .events-btn {
+    letter-spacing: 2px;
+    font-size: 20px;
+  }
+}
+
 
 @media (max-width: 885px) {
   .footer-wrapper {
