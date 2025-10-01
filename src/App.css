@@ -169,6 +169,7 @@ body {
 }
 
 .events-card {
+  cursor: pointer;
   height: 100%;
 }
 
