@@ -1,0 +1,50 @@
+import React from 'react'
+
+const TopSection = () => {
+  return (
+    <div
+      style={{
+        width: '100%',
+        height: '100vh',
+        backgroundImage: 'url(/images/bgTop.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        position: 'relative',
+      }}
+    >
+        <img src="/images/girlBack.png" alt="Baddie" className="relative mx-auto h-screen z-20"/>
+        
+        <div className='absolute inset-0 flex items-center flex-col justify-between px-auto' >
+        
+        <div id='zairzest' className='absolute text-[35vw] sm:text-[230px] top-0 w-full text-center z-10 lg:text-[360px] md:text-[280px] xl:text-[420px]  '>
+            ZAIRZEST
+        </div>
+
+        <div id='zairzestunfill' className='absolute text-[35vw] sm:text-[230px] top-0 w-full text-center z-20 md:text-[280px] lg:text-[360px] xl:text-[420px] '>
+            ZAIRZEST
+        </div>
+        <div id='fivebelow' className='absolute text-[80px] top-[calc(35vw+30px)] md:top-[calc(230px+90px)] right-2 sm:right-16 lg:hidden z-20'>
+            v.fiv<span className='text-red-500'>5</span>
+        </div>
+        <div id="topb" className='flex flex-col-reverse lg:flex-row absolute top-3/4 left-0 right-0 justify-center gap-40 items-center z-30'>
+        <div id="yap" className='text-left text-white w-[380px] backdrop-blur-2xl z-30 '>
+
+
+            The blueprints burned. Yet the grid hums, the circuits breathe, and the execution never halts. What remains are echoes, recursive loops of will and logic, ghosts of commands that refuse to fade. The Code still runs. 
+            <span className='bg-white text-red-500'>
+
+            Scroll to Join The Echo
+            </span>
+        </div>
+         <div id='five' className='hidden lg:block text-[80px]  z-30 '>
+            v.fiv<span className='text-red-500'>5</span>
+        </div>
+
+        </div>
+        </div>
+    </div>
+  )
+}
+
+export default TopSection
