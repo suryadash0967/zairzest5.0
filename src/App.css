@@ -428,7 +428,7 @@ body {
 }
 
 .profile-page-bg-img {
-  background: url(/public/images/profile_page_bg.png) lightgray 50% / cover no-repeat;
+  background: url(/images/profile_page_bg.png) lightgray 50% / cover no-repeat;
   mix-blend-mode: color-dodge;
   opacity: 0.76;
 

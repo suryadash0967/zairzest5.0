@@ -19,7 +19,7 @@ const Navbar = () => {
       const scrollPosition = window.scrollY;
 
       // Show navbar only when scrolled past TopSection
-      if (scrollPosition > topSectionHeight * 0.8) {
+      if (scrollPosition > topSectionHeight * 1) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -40,20 +40,20 @@ const Navbar = () => {
         isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
     >
-      <li className="flex flex-row gap-60 pt-6 text-3xl">
-        <a className="cursor-pointer" onClick={() => navigate("/")}>
+      <li className="flex flex-row gap-40 py-6 text-3xl mx-auto">
+        <a className="cursor-pointer relative pb-2 after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:w-2 after:h-2 after:bg-white after:rounded-full after:opacity-0 after:transition-opacity after:duration-200 hover:after:opacity-100" onClick={() => navigate("/")}> 
           Home
         </a>
-        <a className="cursor-pointer" onClick={() => navigate("/#events")}>
+        <a className="cursor-pointer relative pb-2 after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:w-2 after:h-2 after:bg-white after:rounded-full after:opacity-0 after:transition-opacity after:duration-200 hover:after:opacity-100" onClick={() => navigate("/#events")}>
           Events
         </a>
         <a
-          className="cursor-pointer whitespace-nowrap"
+          className="cursor-pointer whitespace-nowrap relative pb-2 after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:w-2 after:h-2 after:bg-white after:rounded-full after:opacity-0 after:transition-opacity after:duration-200 hover:after:opacity-100"
           onClick={() => navigate("/#about")}
         >
           About Us
         </a>
-        <a className="cursor-pointer" onClick={() => navigate("/register")}>
+        <a className="cursor-pointer relative pb-2 after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:w-2 after:h-2 after:bg-white after:rounded-full after:opacity-0 after:transition-opacity after:duration-200 hover:after:opacity-100" onClick={() => navigate("/register")}>
           Register
         </a>
       </li>
