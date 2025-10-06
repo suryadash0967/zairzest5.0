@@ -97,35 +97,42 @@ const Navbar = () => {
         </nav>
       )}
 
-      {/* Mobile Hamburger Menu */}
+      {/* Mobile Sidebar Toggle */}
       {isMobile && (
         <button
-          className={`fixed top-6 right-6 sm:top-8 sm:right-8 z-50 p-2 transition-all duration-300 ${
+          className={`fixed top-6 right-6 sm:top-8 sm:right-8 z-50 p-3 sm:p-4 transition-all duration-300 ${
             isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
           }`}
           onClick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
         >
-          <div className="w-7 h-7 sm:w-8 sm:h-8 flex flex-col justify-center items-center relative">
-            <span
-              className={`block h-0.5 w-7 sm:w-8 bg-white transition-all duration-300 ease-in-out ${
-                isMobileMenuOpen
-                  ? "rotate-45 translate-y-0"
-                  : "translate-y-[-6px]"
-              }`}
-            ></span>
-            <span
-              className={`block h-0.5 w-7 sm:w-8 bg-white transition-all duration-300 ease-in-out ${
-                isMobileMenuOpen ? "opacity-0 scale-0" : "opacity-100 scale-100"
-              }`}
-            ></span>
-            <span
-              className={`block h-0.5 w-7 sm:w-8 bg-white transition-all duration-300 ease-in-out ${
-                isMobileMenuOpen
-                  ? "-rotate-45 translate-y-0"
-                  : "translate-y-[6px]"
-              }`}
-            ></span>
+          <img
+            src={
+              isMobileMenuOpen
+                ? "/images/close-sidebar.png"
+                : "/images/open-sidebar.png"
+            }
+            alt={isMobileMenuOpen ? "Close sidebar" : "Open sidebar"}
+            className={`object-contain transition-all duration-300 ease-in-out hover:opacity-80 ${
+              isMobileMenuOpen
+                ? "w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8"
+                : "w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12"
+            }`}
+            onError={(e) => {
+              // Fallback to text if images fail to load
+              e.target.style.display = "none";
+              e.target.nextSibling.style.display = "block";
+            }}
+          />
+          <div
+            className={`text-white flex items-center justify-center ${
+              isMobileMenuOpen
+                ? "w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-lg sm:text-xl lg:text-2xl"
+                : "w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-xl sm:text-2xl lg:text-3xl"
+            }`}
+            style={{ display: "none" }}
+          >
+            {isMobileMenuOpen ? "✕" : "☰"}
           </div>
         </button>
       )}
