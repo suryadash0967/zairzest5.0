@@ -100,26 +100,30 @@ const Navbar = () => {
       {/* Mobile Hamburger Menu */}
       {isMobile && (
         <button
-          className={`fixed top-6 right-6 z-50 p-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 transition-all duration-300 ${
+          className={`fixed top-6 right-6 sm:top-8 sm:right-8 z-50 p-2 transition-all duration-300 ${
             isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
           }`}
           onClick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
         >
-          <div className="w-6 h-6 flex flex-col justify-center items-center">
+          <div className="w-7 h-7 sm:w-8 sm:h-8 flex flex-col justify-center items-center relative">
             <span
-              className={`block h-0.5 w-6 bg-white transition-all duration-300 ${
-                isMobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
+              className={`block h-0.5 w-7 sm:w-8 bg-white transition-all duration-300 ease-in-out ${
+                isMobileMenuOpen
+                  ? "rotate-45 translate-y-0"
+                  : "translate-y-[-6px]"
               }`}
             ></span>
             <span
-              className={`block h-0.5 w-6 bg-white mt-1 transition-all duration-300 ${
-                isMobileMenuOpen ? "opacity-0" : ""
+              className={`block h-0.5 w-7 sm:w-8 bg-white transition-all duration-300 ease-in-out ${
+                isMobileMenuOpen ? "opacity-0 scale-0" : "opacity-100 scale-100"
               }`}
             ></span>
             <span
-              className={`block h-0.5 w-6 bg-white mt-1 transition-all duration-300 ${
-                isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
+              className={`block h-0.5 w-7 sm:w-8 bg-white transition-all duration-300 ease-in-out ${
+                isMobileMenuOpen
+                  ? "-rotate-45 translate-y-0"
+                  : "translate-y-[6px]"
               }`}
             ></span>
           </div>
@@ -129,37 +133,57 @@ const Navbar = () => {
       {/* Mobile Sidebar */}
       {isMobile && (
         <div
-          className={`fixed top-0 right-0 h-full w-80 bg-black/90 backdrop-blur-lg border-l border-white/20 z-40 transform transition-transform duration-300 ease-in-out ${
-            isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          className={`fixed top-0 right-0 h-screen w-full sm:max-w-md lg:max-w-lg bg-black z-40 transform transition-all duration-500 ease-out ${
+            isMobileMenuOpen
+              ? "translate-x-0 opacity-100"
+              : "translate-x-full opacity-0"
           }`}
         >
-          <div className="flex flex-col items-center justify-center h-full space-y-8 text-white">
-            <nav className="flex flex-col space-y-8 text-2xl" id="molde">
+          <div className="flex flex-col justify-between h-full px-6 sm:px-12 lg:px-16 py-12 sm:py-16">
+            {/* Navigation Menu */}
+            <nav
+              className="flex flex-col space-y-8 sm:space-y-12 lg:space-y-16 text-white mt-12 sm:mt-16 lg:mt-20"
+              id="molde"
+            >
               <a
-                className="cursor-pointer text-center hover:text-white/80 transition-colors duration-200 py-3 px-6 rounded-lg hover:bg-white/10"
+                className="cursor-pointer text-left  text-2xl sm:text-2xl lg:text-3xl xl:text-3xl font-light tracking-wide sm:tracking-wider lg:tracking-widest hover:text-white/80 transition-colors duration-300 leading-relaxed"
                 onClick={() => handleMobileNavigation("/")}
               >
                 Home
               </a>
               <a
-                className="cursor-pointer text-center hover:text-white/80 transition-colors duration-200 py-3 px-6 rounded-lg hover:bg-white/10"
+                className="cursor-pointer text-left text-2xl sm:text-2xl lg:text-3xl xl:text-3xl font-light tracking-wide sm:tracking-wider lg:tracking-widest hover:text-white/80 transition-colors duration-300 leading-relaxed"
                 onClick={() => handleMobileNavigation("/#events")}
               >
                 Events
               </a>
               <a
-                className="cursor-pointer text-center hover:text-white/80 transition-colors duration-200 py-3 px-6 rounded-lg hover:bg-white/10"
+                className="cursor-pointer text-left  text-2xl sm:text-2xl lg:text-3xl xl:text-3xl font-light tracking-wide sm:tracking-wider lg:tracking-widest hover:text-white/80 transition-colors duration-300 leading-relaxed"
                 onClick={() => handleMobileNavigation("/#about")}
               >
                 About Us
               </a>
               <a
-                className="cursor-pointer text-center hover:text-white/80 transition-colors duration-200 py-3 px-6 rounded-lg hover:bg-white/10"
+                className="cursor-pointer text-left text-2xl sm:text-2xl lg:text-3xl xl:text-3xl font-light tracking-wide sm:tracking-wider lg:tracking-widest text-orange-500 hover:text-orange-400 transition-colors duration-300 leading-relaxed"
                 onClick={() => handleMobileNavigation("/register")}
               >
                 Register
               </a>
             </nav>
+
+            {/* ZAIRZA Logo */}
+            <div className="flex items-center justify-start mb-5 sm:mb-8 lg:mb-5">
+              <img
+                src="/images/zairza.png"
+                alt="ZAIRZA"
+                className="w-30 sm:w-28 lg:w-38 xl:w-36 h-auto object-contain transition-all duration-300 hover:opacity-80"
+                onError={(e) => {
+                  // Fallback to zairza.png if zairza-logo.png fails
+                  e.target.src = "/images/zairza.png";
+                }}
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       )}
@@ -167,7 +191,7 @@ const Navbar = () => {
       {/* Mobile Overlay */}
       {isMobile && isMobileMenuOpen && (
         <div
-          className="fixed inset-0 bg-black/50 z-30"
+          className="fixed inset-0 bg-black/30 z-30 transition-opacity duration-500"
           onClick={() => setIsMobileMenuOpen(false)}
         ></div>
       )}
