@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 const SignupPage = () => {
   const [bgImage, setBgImage] = useState("/images/register.png");
   const [showPassword, setShowPassword] = useState(false);
+  const [borderSize, setBorderSize] = useState("20px");
   // Form field states
   const [name, setName] = useState("");
   const [regdNo, setRegdNo] = useState("");
@@ -16,12 +17,17 @@ const SignupPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // function to set image based on screen size
+    // function to set image and border size based on screen size
     const handleResize = () => {
       if (window.innerWidth < 768) {
         setBgImage("/images/register.png");
+        setBorderSize("8px");
+      } else if (window.innerWidth < 1024) {
+        setBgImage("/images/register.png");
+        setBorderSize("12px");
       } else {
         setBgImage("/images/register.png");
+        setBorderSize("16px");
       }
     };
 
@@ -51,17 +57,27 @@ const SignupPage = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="relative flex flex-col lg:flex-row w-10/12 max-w-[800px] gap-4 lg:gap-6 rounded-2xl bg-[rgba(20,20,20,0.75)] p-4 lg:p-6 shadow-[0_0_30px_#000] backdrop-blur-sm border border-white/20 h-auto max-h-[75vh]">
-          {/* Decorative corner elements */}
-          <div className="absolute top-3 left-3 w-5 h-5 lg:w-6 lg:h-6 border-l-2 border-t-2 border-gray-500 rounded-tl-lg"></div>
-          <div className="absolute top-3 right-3 w-5 h-5 lg:w-6 lg:h-6 border-r-2 border-t-2 border-gray-500 rounded-tr-lg"></div>
-          <div className="absolute bottom-3 left-3 w-5 h-5 lg:w-6 lg:h-6 border-l-2 border-b-2 border-gray-500 rounded-bl-lg"></div>
-          <div className="absolute bottom-3 right-3 w-5 h-5 lg:w-6 lg:h-6 border-r-2 border-b-2 border-gray-500 rounded-br-lg"></div>
-
+        <div
+          className="relative flex flex-col lg:flex-row w-10/12 max-w-[800px] gap-4 lg:gap-6 bg-[rgba(20,20,20,0.75)] shadow-[0_0_30px_#000] backdrop-blur-sm h-auto max-h-[75vh]"
+          style={{
+            border: `${borderSize} solid transparent`,
+            borderImage: `url(/images/boarder.png) ${
+              parseInt(borderSize) * 1.5
+            } stretch`,
+            borderImageSlice: `${parseInt(borderSize) * 1.5} fill`,
+            borderImageWidth: borderSize,
+            borderImageOutset: "0",
+            borderImageRepeat: "stretch",
+            boxSizing: "border-box",
+            padding: `calc(${borderSize} + 12px)`,
+            borderRadius: "0",
+            overflow: "visible",
+          }}
+        >
           {/* Left side (image) */}
-          <div className="relative z-10 flex lg:min-w-[250px] lg:max-w-[320px] flex-1 items-center justify-center py-3 lg:py-0">
+          <div className="relative z-10 flex lg:min-w-[250px] lg:max-w-[320px] flex-1 items-center justify-center">
             <img
-              className="w-full h-full object-contain max-h-full"
+              className="w-full h-[90%] pl-3.5 object-contain max-h-full"
               src="/images/fprint.png"
               alt="Signup Decorative"
               onError={(e) => {
@@ -74,7 +90,7 @@ const SignupPage = () => {
           </div>
 
           {/* Right side (form) */}
-          <div className="relative z-10 flex max-w-[420px] flex-1 flex-col justify-start px-3 lg:px-4 py-4">
+          <div className="relative z-10 flex max-w-[420px] flex-1 flex-col justify-start">
             <div className="w-full">
               <h2 className="text-2xl despina_ lg:text-5xl  leading-tight mb-2 text-white">
                 Join the Echo
