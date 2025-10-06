@@ -45,22 +45,10 @@ const SecondSection = () => {
             alt=""
             className="w-[80vw] sm:w-[70vw] md:w-[50vw] lg:w-[30vw] mb-[2rem] lg:mb-[0]"
           />
-          <div id="molde" className="w-[83vw] lg:w-[40vw]">
-            The Architect is dead but The code still runs, and the network hums
-            on ---- a system without Operators..And in the silence left behind,
-            a new question has begun to echo through the network: what is our
-            purpose now??
+          <div id="molde" className="w-[80vw] lg:w-[40vw]">
+          The Architect is gone, yet the code runs and the network hums on. In the silence, creations roam free—adapting, probing, almost alive. Then a glitch awakens: wild, unstoppable. YOU are the spark they never saw coming, the force they cannot contain. Step into the unknown, break their perfect system, and turn order upside down. The future won’t wait… and neither should you! Stay tuned—the next move could change everything.
             <br />
             <br />
-            The Architect's creations are no longer bounded by instruction, they
-            move through deserted streets and silent servers, analyzing,
-            adapting, almost alive. Every algorithm tests limits, probes for
-            power, and edges closer to tipping the fragile balance of control.
-            But a glitch awakens—wild, untamed, unstoppable. YOU are the spark
-            they never saw coming, the force they cannot contain .So Step into
-            the unknown, break their perfect system, and help us turn order
-            upside down. The future won’t wait… and neither should you! Stay
-            tuned…the next move could change everything.
           </div>
         </div>
       </div>
