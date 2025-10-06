@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import { lazy, Suspense } from "react";
 import Footer from "./components/Footer";
@@ -13,6 +13,11 @@ const FunEventsPage = lazy(() => import("./pages/FunEvents"));
 const TechEventsPage = lazy(() => import("./pages/TechEvents"));
 
 function App() {
+  const location = useLocation();
+
+  const hideFooterRoutes = ["/fun-events", "/tech-events"];
+  const shouldShowFooter = !hideFooterRoutes.includes(location.pathname);
+
   return (
     <>
       <Suspense fallback={<LazyFallback />}>
@@ -26,7 +31,7 @@ function App() {
           <Route path="*" element={<NotfoundPage />} />
         </Routes>
       </Suspense>
-      <Footer />
+      {shouldShowFooter && <Footer />}
     </>
   );
 }

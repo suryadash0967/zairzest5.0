@@ -1,10 +1,13 @@
+import { useNavigate } from "react-router-dom";
+
 function Explore() {
+  const navigate = useNavigate();
+
   return (
     <div
       className="explore-wrapper"
       style={{
         width: '100%',
-        height: '100vh',
         backgroundImage: 'url(/images/explore_page_combined.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -21,14 +24,14 @@ function Explore() {
       </div>
 
       <div className="tech-fun-wrapper">
-        <a className="events-card" href="">
+        <a className="events-card"  onClick={() => navigate("/tech-events")}>
           <img src="/images/techevents.png" alt="" />
           <div className="events-desc">
             <p>Know more about</p>
             <div>TECH EVENTS</div>
           </div>
         </a>
-        <a className="events-card" href="">
+        <a className="events-card" onClick={() => navigate("/fun-events")}>
           <img src="/images/funevents.png" alt="" />
           <div className="events-desc">
             <p>Know more about</p>
