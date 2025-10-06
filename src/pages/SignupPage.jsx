@@ -3,6 +3,8 @@ import Navbar from "../components/Navbar";
 import { FaEyeSlash } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { be_url } from "../env/e";
 
 const SignupPage = () => {
   const [bgImage, setBgImage] = useState("/images/register.png");
@@ -40,9 +42,22 @@ const SignupPage = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const onRegister = (e) => {
+  const onRegister = async (e) => {
     e.preventDefault();
-    // Handle registration logic here
+    const formData = { name, regdNo, gender, email, password };
+    console.log("Form Data Submitted: ", formData);
+
+    try {
+      const res = await axios.post(`${be_url}/create/user`, formData);
+      if (res.data.success) {
+        // Navigate to payment page with user ID
+        console.log("Registration successful:", res.data);
+      } else {
+        alert("Registration failed: " + res.data.message);
+      }
+    } catch (error) {
+      console.error("Error during registration:", error);
+    }
   };
   return (
     <>

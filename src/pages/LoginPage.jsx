@@ -3,6 +3,8 @@ import Navbar from "../components/Navbar";
 import { FaEyeSlash } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { be_url } from "../env/e";
 
 const LoginPage = () => {
   const [bgImage, setBgImage] = useState("/images/login.png");
@@ -37,9 +39,22 @@ const LoginPage = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const onLogin = (e) => {
+  const onLogin = async (e) => {
     e.preventDefault();
-    // Handle login logic here
+
+    const formData = { email, password };
+    console.log("Login Form Data Submitted: ", formData);
+    try {
+      const res = await axios.post(`${be_url}/login/user`, formData);
+      if (res.data.success) {
+        // Navigate to events
+        console.log("Login successful:", res.data);
+      } else {
+        alert("Login failed: " + res.data.message);
+      }
+    } catch (error) {
+      console.error("Error during login:", error);
+    }
   };
   return (
     <>
