@@ -1,6 +1,6 @@
 function Legacy() {
     return (
-        <div className="legacy-wrapper">
+        <div className="legacy-wrapper" id="about">
             <div className="about-zairzest-wrapper">
                 <div className="about-zairzest-head">
                     About <span style={{ color: "#E9270A" }}>ZAIRZEST</span>

@@ -1,4 +1,5 @@
 import React from 'react'
+import LogoSequence from './LogoSequence'
 
 const TopSection = () => {
   return (
@@ -13,6 +14,7 @@ const TopSection = () => {
         position: 'relative',
       }}
     >
+        <LogoSequence />
         <img src="/images/girlBack.png" alt="Baddie" className="relative mx-auto h-screen z-20"/>
         
         <div className='absolute inset-0 flex items-center flex-col justify-between px-auto' >

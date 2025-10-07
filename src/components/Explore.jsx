@@ -6,6 +6,7 @@ function Explore() {
   return (
     <div
       className="explore-wrapper"
+      id="events"
       style={{
         width: '100%',
         backgroundImage: 'url(/images/explore_page_combined.png)',
