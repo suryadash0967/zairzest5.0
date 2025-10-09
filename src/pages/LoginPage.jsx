@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
-import { FaEyeSlash } from "react-icons/fa";
-import { FaEye } from "react-icons/fa";
+import { FaEyeSlash, FaEye } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import axios from "axios"; // Import axios
 
 const LoginPage = () => {
   const [bgImage, setBgImage] = useState("/images/login.png");
   const [showPassword, setShowPassword] = useState(false);
   const [borderSize, setBorderSize] = useState("16px");
-  // Form field states
+
+  // --- NEW: Form, loading, and error states ---
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
-    // function to set image and border size based on screen size
     const handleResize = () => {
       if (window.innerWidth < 768) {
         setBgImage("/images/login.png");
@@ -27,20 +29,44 @@ const LoginPage = () => {
         setBorderSize("16px");
       }
     };
-
-    // run once at mount
     handleResize();
-    // run whenever screen resizes
     window.addEventListener("resize", handleResize);
-
-    // cleanup
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const onLogin = (e) => {
+  // --- NEW: Handle login logic ---
+  const onLogin = async (e) => {
     e.preventDefault();
-    // Handle login logic here
+    if (!email || !password) {
+      setError("Please fill in both fields.");
+      return;
+    }
+    setLoading(true);
+    setError("");
+
+    try {
+      const response = await axios.post(
+        "https://zairzest-backend-2025-01-1.onrender.com/api/users/login/user",
+        {
+          email,
+          password,
+        }
+      );
+      
+      // Assuming the token is in response.data.token
+      const { token } = response.data;
+      localStorage.setItem("authToken", token); // Save token
+      
+      navigate("/profile"); // Navigate to profile on success
+    } catch (err) {
+      // Handle login errors (e.g., invalid credentials)
+      const errorMessage = err.response?.data?.message || "Login failed. Please try again.";
+      setError(errorMessage);
+    } finally {
+      setLoading(false);
+    }
   };
+
   return (
     <>
       <Navbar />
@@ -77,7 +103,6 @@ const LoginPage = () => {
               src="/images/fprint.png"
               alt="Login Decorative"
               onError={(e) => {
-                // Fallback to icon if image fails to load
                 e.target.style.display = "none";
                 e.target.parentElement.innerHTML =
                   '<div class="flex items-center justify-center w-full h-full"><div class="text-6xl lg:text-8xl text-orange-500">⚡</div></div>';
@@ -127,10 +152,15 @@ const LoginPage = () => {
                 </button>
               </div>
 
+              {/* --- NEW: Error message display --- */}
+              {error && (
+                <p className="text-red-500 text-xs molde_ text-center">{error}</p>
+              )}
+
               <div className="w-full molde_ text-left text-white/80 text-xs mt-2">
                 Forget Password?{" "}
                 <a
-                  onClick={() => navigate("/reset-password")}
+                  href="/reset-password"
                   className="font-semibold text-orange-500 hover:text-orange-400 transition-colors underline decoration-orange-500/50 hover:decoration-orange-400"
                 >
                   Reset Password
@@ -140,7 +170,7 @@ const LoginPage = () => {
                 Don't have an account?{" "}
                 <a
                   onClick={() => navigate("/register")}
-                  className="font-semibold text-orange-500 hover:text-orange-400 transition-colors underline decoration-orange-500/50 hover:decoration-orange-400"
+                  className="cursor-pointer font-semibold text-orange-500 hover:text-orange-400 transition-colors underline decoration-orange-500/50 hover:decoration-orange-400"
                 >
                   Sign Up
                 </a>
@@ -148,21 +178,18 @@ const LoginPage = () => {
               <div className="flex justify-center mt-4">
                 <button
                   type="submit"
-                  className="bg-[#FF4D00] text-3xl flex justify-center items-center text-white border-4 despina_ transition-all duration-300 active:scale-[0.98]"
+                  disabled={loading} // --- NEW: Disable button while loading ---
+                  className="bg-[#FF4D00] text-3xl flex justify-center items-center text-white border-4 despina_ transition-all duration-300 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
                   style={{
                     width: "128px",
                     height: "60px",
-                    transform: "rotate(0deg)",
-                    opacity: 1,
                     borderWidth: "2px",
                     paddingTop: "8px",
-                    paddingRight: "24px",
                     paddingBottom: "8px",
-                    paddingLeft: "24px",
-                    gap: "10px",
                   }}
                 >
-                  LOGIN
+                  {/* --- NEW: Show loading text --- */}
+                  {loading ? "..." : "LOGIN"}
                 </button>
               </div>
             </form>

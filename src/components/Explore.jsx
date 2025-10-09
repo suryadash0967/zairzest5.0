@@ -21,7 +21,9 @@ function Explore() {
         Explore the Events
       </div>
       <div className="explore-desc">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, totam quae illum deleniti excepturi qui laborum sunt assumenda? Qui sit sequi velit id quia neque reiciendis fuga omnis sapiente quae nobis voluptatibus, debitis
+        Everything has been made simple for you to scroll around and get the most
+
+out of the options available.
       </div>
 
       <div className="tech-fun-wrapper">

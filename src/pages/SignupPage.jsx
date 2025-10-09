@@ -1,23 +1,25 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
-import { FaEyeSlash } from "react-icons/fa";
-import { FaEye } from "react-icons/fa";
+import { FaEyeSlash, FaEye } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import axios from "axios"; // Import axios
 
 const SignupPage = () => {
   const [bgImage, setBgImage] = useState("/images/register.png");
   const [showPassword, setShowPassword] = useState(false);
   const [borderSize, setBorderSize] = useState("20px");
-  // Form field states
+  
+  // Form, loading, and error states
   const [name, setName] = useState("");
   const [regdNo, setRegdNo] = useState("");
   const [gender, setGender] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
-    // function to set image and border size based on screen size
     const handleResize = () => {
       if (window.innerWidth < 768) {
         setBgImage("/images/register.png");
@@ -30,24 +32,45 @@ const SignupPage = () => {
         setBorderSize("16px");
       }
     };
-
-    // run once at mount
     handleResize();
-    // run whenever screen resizes
     window.addEventListener("resize", handleResize);
-
-    // cleanup
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const onRegister = (e) => {
+  // Handle registration logic
+  const onRegister = async (e) => {
     e.preventDefault();
-    // Handle registration logic here
+    if (!name || !regdNo || !gender || !email || !password) {
+      setError("Please fill out all fields.");
+      return;
+    }
+    setLoading(true);
+    setError("");
+
+    try {
+      await axios.post(
+        "https://zairzest-backend-2025-01-1.onrender.com/api/users/create/user",
+        {
+          name,
+          regdNo,
+          gender,
+          email,
+          password,
+        }
+      );
+      // On success, navigate to the login page
+      navigate("/login");
+    } catch (err) {
+      const errorMessage = err.response?.data?.message || "Registration failed. Please try again.";
+      setError(errorMessage);
+    } finally {
+      setLoading(false);
+    }
   };
+
   return (
     <>
       <Navbar />
-
       <div
         className="w-full h-[100vh] text-white relative flex justify-center items-center"
         style={{
@@ -58,8 +81,8 @@ const SignupPage = () => {
         }}
       >
         <div
-          className="relative flex flex-col lg:flex-row w-10/12 max-w-[800px] gap-4 lg:gap-6 bg-[rgba(20,20,20,0.75)] shadow-[0_0_30px_#000] backdrop-blur-sm h-auto max-h-[75vh]"
-          style={{
+          className="relative flex flex-col lg:flex-row w-10/12 max-w-[800px] gap-4 lg:gap-6 bg-[rgba(20,20,20,0.75)] shadow-[0_0_30px_#000] backdrop-blur-sm h-auto max-h-[75vh] overflow-y-auto"
+           style={{
             border: `${borderSize} solid transparent`,
             borderImage: `url(/images/boarder.png) ${
               parseInt(borderSize) * 1.5
@@ -81,7 +104,6 @@ const SignupPage = () => {
               src="/images/fprint.png"
               alt="Signup Decorative"
               onError={(e) => {
-                // Fallback to icon if image fails to load
                 e.target.style.display = "none";
                 e.target.parentElement.innerHTML =
                   '<div class="flex items-center justify-center w-full h-full"><div class="text-6xl lg:text-8xl text-orange-500">⚡</div></div>';
@@ -128,18 +150,10 @@ const SignupPage = () => {
                     onChange={(e) => setGender(e.target.value)}
                     className="w-full rounded-md border-2 border-white/30  px-3 py-2.5 text-sm text-white/50 outline-none transition-all duration-300 focus:border-orange-500 focus:bg-white/10 focus:shadow-lg hover:border-white/50"
                   >
-                    <option value="" className="bg-gray-800">
-                      Gender
-                    </option>
-                    <option value="male" className="bg-gray-800">
-                      Male
-                    </option>
-                    <option value="female" className="bg-gray-800">
-                      Female
-                    </option>
-                    <option value="other" className="bg-gray-800">
-                      Other
-                    </option>
+                    <option value="" className="bg-gray-800">Gender</option>
+                    <option value="male" className="bg-gray-800">Male</option>
+                    <option value="female" className="bg-gray-800">Female</option>
+                    <option value="other" className="bg-gray-800">Other</option>
                   </select>
                 </div>
               </div>
@@ -173,34 +187,36 @@ const SignupPage = () => {
                 </button>
               </div>
 
+              {/* Error message display */}
+              {error && (
+                <p className="text-red-500 text-xs molde_ text-center">{error}</p>
+              )}
+
               <div className="w-full molde_ text-left text-white/80 text-xs mt-2">
                 Already have an account?{" "}
                 <a
                   onClick={() => navigate("/login")}
-                  className="font-semibold text-orange-500 hover:text-orange-400 transition-colors underline decoration-orange-500/50 hover:decoration-orange-400"
+                  className="cursor-pointer font-semibold text-orange-500 hover:text-orange-400 transition-colors underline decoration-orange-500/50 hover:decoration-orange-400"
                 >
                   Login
                 </a>
               </div>
 
               <div className="flex justify-center mt-4">
+                {/* --- MODIFIED BUTTON --- */}
                 <button
                   type="submit"
-                  className="bg-[#FF4D00] text-3xl flex justify-center items-center text-white border-4 despina_ transition-all duration-300 active:scale-[0.98]"
-                  style={{
-                    width: "250px",
+                  disabled={loading}
+                  className="bg-[#FF4D00] text-3xl flex justify-center items-center text-white border-4 despina_ transition-all duration-300 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
+                   style={{
+                    width: "180px", // Adjusted width
                     height: "53px",
-                    transform: "rotate(0deg)",
-                    opacity: 1,
                     borderWidth: "2px",
                     paddingTop: "8px",
-                    paddingRight: "24px",
                     paddingBottom: "8px",
-                    paddingLeft: "24px",
-                    gap: "10px",
                   }}
                 >
-                  Proceed to Payment
+                  {loading ? "..." : "Register"} {/* Changed text */}
                 </button>
               </div>
             </form>
