@@ -96,7 +96,9 @@ function Legacy() {
               </div>
             </div>
             <div className="footfalls legacy-card">
-              <div className="card-main">670+</div>
+              <div className="card-main">
+                <img src="/images/footfalls.png" alt="Design Domains" className="single-image"/>
+                </div>
               <div className="legacy-card-bottom">
                 <div>Footfalls</div>
                 <div>670+ footfalls</div>
