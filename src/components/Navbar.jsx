@@ -5,17 +5,17 @@ const Navbar = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  
+
   // --- NEW: State to track authentication status ---
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const location = useLocation();
   const navigate = useNavigate();
-  
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
-  
+
   // --- NEW: Logout handler ---
   const handleLogout = () => {
     localStorage.removeItem('authToken'); // Clear token
@@ -65,14 +65,14 @@ const Navbar = () => {
     if (location.pathname !== "/") {
       setIsVisible(true);
     } else {
-        const handleScroll = () => {
-            const topSectionHeight = window.innerHeight;
-            const scrollPosition = window.scrollY;
-            setIsVisible(scrollPosition > topSectionHeight * 1);
-        };
-        handleScroll();
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
+      const handleScroll = () => {
+        const topSectionHeight = window.innerHeight;
+        const scrollPosition = window.scrollY;
+        setIsVisible(scrollPosition > topSectionHeight * 0.1);
+      };
+      handleScroll();
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
     }
     return () => window.removeEventListener("resize", checkScreenSize);
   }, [location.pathname]);
@@ -92,19 +92,41 @@ const Navbar = () => {
             <li className={navLinkClass} onClick={() => handleNavigation("/")}>Home</li>
             <li className={navLinkClass} onClick={() => handleNavigation("/#events")}>Events</li>
             <li className={`${navLinkClass} whitespace-nowrap`} onClick={() => handleNavigation("/#about")}>Legacy</li>
-            
-            {/* --- NEW: Conditional links for desktop --- */}
-            {isAuthenticated ? (
-                <>
+
+            {(() => {
+              if (location.pathname === "/register") {
+                return (
+                  <li className={navLinkClass} onClick={handleLogout}>
+                    Login
+                  </li>
+                );
+              } else if (location.pathname === "/login") {
+                return (
+                  <li className={navLinkClass} onClick={() => handleNavigation("/register")}>
+                    Register
+                  </li>
+                );
+              } else if (location.pathname === "/profile") {
+                return (
+                  <li className={navLinkClass} onClick={handleLogout}>
+                    Logout
+                  </li>
+                );
+              } else if (isAuthenticated) {
+                return (
+                  <>
                     <li className={navLinkClass} onClick={() => handleNavigation("/profile")}>Profile</li>
                     <li className={navLinkClass} onClick={handleLogout}>Logout</li>
-                </>
-            ) : (
-                <>
-                    <li className={navLinkClass} onClick={() => handleNavigation("/login")}>Login</li>
+                  </>
+                );
+              } else {
+                return (
+                  <>
                     <li className={navLinkClass} onClick={() => handleNavigation("/register")}>Register</li>
-                </>
-            )}
+                  </>
+                );
+              }
+            })()}
           </ul>
         </nav>
       )}
@@ -116,11 +138,11 @@ const Navbar = () => {
           onClick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
         >
-            <img
-             src={isMobileMenuOpen ? "/images/close-sidebar.png" : "/images/open-sidebar.png"}
-             alt={isMobileMenuOpen ? "Close sidebar" : "Open sidebar"}
-             className={`object-contain transition-all duration-300 ease-in-out hover:opacity-80 ${isMobileMenuOpen ? "w-6 h-6 sm:w-7 sm:h-7" : "w-8 h-8 sm:w-10 sm:h-10"}`}
-            />
+          <img
+            src={isMobileMenuOpen ? "/images/close-sidebar.png" : "/images/open-sidebar.png"}
+            alt={isMobileMenuOpen ? "Close sidebar" : "Open sidebar"}
+            className={`object-contain transition-all duration-300 ease-in-out hover:opacity-80 ${isMobileMenuOpen ? "w-6 h-6 sm:w-7 sm:h-7" : "w-8 h-8 sm:w-10 sm:h-10"}`}
+          />
         </button>
       )}
 
@@ -134,19 +156,41 @@ const Navbar = () => {
               <a className={mobileNavLinkClass} onClick={() => handleNavigation("/")}>Home</a>
               <a className={mobileNavLinkClass} onClick={() => handleNavigation("/#events")}>Events</a>
               <a className={mobileNavLinkClass} onClick={() => handleNavigation("/#about")}>Legacy</a>
-             
-              {/* --- NEW: Conditional links for mobile --- */}
-               {isAuthenticated ? (
-                <>
-                  <a className={mobileNavLinkClass} onClick={() => handleNavigation("/profile")}>Profile</a>
-                  <a className={`${mobileNavLinkClass} text-orange-500`} onClick={handleLogout}>Logout</a>
-                </>
-              ) : (
-                <>
-                  <a className={mobileNavLinkClass} onClick={() => handleNavigation("/login")}>Login</a>
-                  <a className={`${mobileNavLinkClass} text-orange-500`} onClick={() => handleNavigation("/register")}>Register</a>
-                </>
-              )}
+
+              {(() => {
+                if (location.pathname === "/register") {
+                  return (
+                    <a className={`${mobileNavLinkClass} text-orange-500`} onClick={handleLogout}>
+                      Logout
+                    </a>
+                  );
+                } else if (location.pathname === "/login") {
+                  return (
+                    <a className={`${mobileNavLinkClass} text-orange-500`} onClick={() => handleNavigation("/register")}>
+                      Register
+                    </a>
+                  );
+                } else if (location.pathname === "/profile") {
+                  return (
+                    <a className={`${mobileNavLinkClass} text-orange-500`} onClick={handleLogout}>
+                      Logout
+                    </a>
+                  );
+                } else if (isAuthenticated) {
+                  return (
+                    <>
+                      <a className={mobileNavLinkClass} onClick={() => handleNavigation("/profile")}>Profile</a>
+                      <a className={`${mobileNavLinkClass} text-orange-500`} onClick={handleLogout}>Logout</a>
+                    </>
+                  );
+                } else {
+                  return (
+                    <>
+                      <a className={`${mobileNavLinkClass} text-orange-500`} onClick={() => handleNavigation("/register")}>Register</a>
+                    </>
+                  );
+                }
+              })()}
             </nav>
             <div className="flex items-center justify-start mb-5">
               <img

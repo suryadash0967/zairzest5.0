@@ -27,7 +27,7 @@ const SecondSection = () => {
     <>
       <Navbar />
       <div
-        className="w-full h-[125vh] lg:h-[100vh] text-white relative"
+        className="w-full h-[100vh] text-white relative"
         style={{
           backgroundImage: `url(${bgImage})`,
           backgroundSize: 'cover',

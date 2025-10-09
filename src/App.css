@@ -673,6 +673,7 @@ body {
   flex-wrap: wrap;
   gap: 3rem;
   position: relative;
+  padding: 0 3rem;
 }
 
 .event-card-container {
@@ -816,12 +817,14 @@ body {
   display: flex;
   justify-content: center;
   height: 500px;
+  margin-bottom: 3rem;
 }
 
 .events-page-wrapper .events-img {
   left: 50%;
   transform: translateX(-50%);
   width: 340px;
+  /* margin-bottom: 2rem; */
 }
 
 .events-page-wrapper .events-img.img1 {
@@ -1024,6 +1027,16 @@ body {
   .events-card:nth-of-type(2) {
     margin-top: -5rem;
   }
+
+  .events-page-wrapper .profile-left-container {
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  margin-bottom: 0rem;
+}
+
+
+
 
 
   .tech-fun-wrapper {
@@ -1280,7 +1293,7 @@ body {
   }
 }
 
-@media (max-width: 319px) {
+@media (max-width: 358px) {
   .footer-wrapper {
     height: 75vh;
   }
