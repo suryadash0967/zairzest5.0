@@ -1,4 +1,4 @@
-function EventCard({ title, date, venue, isFlipped, onFlip }) {
+function EventCard({ title, date, venue, isFlipped, onFlip, description }) {
   return (
     <div className={`profile-left-container ${isFlipped ? 'flipped' : ''}`}>
       <div className="profile-left-wrapper">
@@ -33,9 +33,9 @@ function EventCard({ title, date, venue, isFlipped, onFlip }) {
             <img src="/images/events_img_1.png" alt="events" className="profile-img events-img img1" />
             <img src="/images/events_img_2.png" alt="events" className="profile-img events-img img2" />
           </div>
-          <div className="profile-img-desc">
+          <div className="profile-img-desc">  
             <div className="event-back-desc">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat placeat, ullam officiis, quaerat ab, temporibus quis consequatur quasi atque id ex commodi eaque quo eveniet nulla repudiandae! Quo, explicabo nemo.
+              {description}
             </div>
             <div className="back-close-btn" onClick={onFlip}>Close</div>
           </div>
