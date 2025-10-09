@@ -29,6 +29,7 @@ const TopSection = () => {
         </div>
         <div id="topb" className='flex flex-col-reverse lg:flex-row absolute top-3/4 left-0 right-0 justify-center gap-40 items-center z-30'>
         <div id="yap" className='text-left text-white w-[380px] backdrop-blur-2xl z-30 '>
+        <div className='p-2 '>
 
 
             The blueprints burned. Yet the grid hums, the circuits breathe, and the execution never halts. What remains are echoes, recursive loops of will and logic, ghosts of commands that refuse to fade. The Code still runs. 
@@ -36,6 +37,7 @@ const TopSection = () => {
 
             Scroll to Join The Echo
             </span>
+        </div>
         </div>
          <div id='five' className='hidden lg:block text-[80px]  z-30 '>
             v.fiv<span className='text-red-500'>5</span>
