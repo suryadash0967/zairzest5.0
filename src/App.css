@@ -8,7 +8,7 @@
 }
 
 body {
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   background-image: url(/bgTop.png);
   background-color: #141414;
 }
@@ -198,6 +198,22 @@ body {
 /* ------------  
     LEGACY
 -------------- */
+
+.hero-section-img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 780px;
+  z-index: 20;
+}
+
+@media (max-width: 768px) {
+  .hero-section-img {
+    max-width: 650px;
+  }
+  
+}
 
 .legacy-wrapper {
   color: #fff;
