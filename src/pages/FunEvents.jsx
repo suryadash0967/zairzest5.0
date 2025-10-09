@@ -7,20 +7,41 @@ function FunEvents() {
 
   const events = [
     {
-      title: 'Treasure Hunt',
-      date: '27 Apr - 9:00 AM',
+      title: 'Cup Stacking',
+      date: '15-16 Oct - 12 noon onwards',
       venue: 'SAC Area',
+      description: "Cup Stacking is a thrilling blend of speed, skill, and strategy! Participants will take on two exciting challenges — Speed Stacking, where precision and pace are key, and Memory Stacking, where creativity meets quick recall as players recreate given patterns within time limits. Join in to test your reflexes, sharpen your focus, and experience the ultimate stacking showdown!",
+    },
+    {
+      title: 'Paper Dance',
+      date: '15-16 Oct - 12 noon onwards',
+      venue: 'SAC Area',
+      description: "Get ready for the ultimate fun challenge! Team up in pairs, groove to trending beats, and fold your paper smaller with every round. When the music stops, strike the hook step—or go full baraati mode! The pair that folds fast, dances hard, and wins the crowd's heart will be crowned the Ultimate Badshah of Paper Dance!",
+    },
+    {
+      title: 'PvP',
+      date: '15-16 Oct - 12 noon onwards',
+      venue: 'SAC Area',
+      description: "Unleash absolute chaos! Step into the blood-boiling arena where only the ruthless survive. Feel the roar of battle, the clash of steel, and the surge of unstoppable rage. Every strike is a challenge, every second a fight for dominance. No mercy. No retreat. Only victory carved in fury. Crush your rival, claim your glory, and let the world witness your wrath. This is war. This is power. This is legend!",
+    },
+    {
+      title: 'Programemer',
+      date: '15-16 Oct - best ones get featured',
+      venue: 'Online',
+      description: "Programemer aint no casual event ehh.. unlike other events, it starts right at the beginning. Make your memes, put it on the form and lookout for the shoutouts (time to be popular). Remember 'Big brother is always watching'. No plagiarism allowed (We'd detect you anyways). Take your time to submit coz this. Lasts for a week",
     },
     {
       title: 'Treasure Hunt',
-      date: '27 Apr - 9:00 AM',
+      date: '16 Oct - 4:30pm onwards',
       venue: 'SAC Area',
+      description: "Think you're a tech wizard? Time to prove it! Navigate through layers of cryptic codes, steganography puzzles, and mind-bending technical riddles that'll test every byte of your brainpower. Each clue unlocks the next—crack them fast or watch your rivals surge ahead. From hidden links to debugging nightmares, every challenge pushes your limits harder than the last. Solo or squad up, it's a race against time where logic meets chaos. Can you decode, debug, and dominate your way to the treasure? The hunt begins now—may the sharpest mind win!",
     },
     {
-      title: 'Treasure Hunt',
-      date: '27 Apr - 9:00 AM',
-      venue: 'SAC Area',
-    }
+      title: 'Jamming Night',
+      date: '16 Oct - 4:30pm onwards',
+      venue: 'Stage Area',
+      description: "Two days of tech madness, one epic night to close it all! Zairzest's final curtain call isn't about circuits or code—it's pure, unfiltered musical chaos. Live performances, killer riffs, and vocals that'll give you goosebumps. Whether you're here to headbang, vibe, or just scream lyrics at the top of your lungs, this is YOUR night. Grab your crew, lose yourself in the beats, and let's end Zairzest with a bang that echoes till next year. The stage is set, the amps are cranked—let the jamming begin!",
+    },
   ];
 
   return (
@@ -40,6 +61,7 @@ function FunEvents() {
               onFlip={() =>
                 setFlippedIndex(flippedIndex === index ? null : index)
               }
+              description={event.description}
             />
           ))}
         </div>
