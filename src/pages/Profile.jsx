@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import axios from 'axios'; // Import axios
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import Navbar from '../components/Navbar';
 
 function Profile() {
     const [isFlipped, setIsFlipped] = useState(false);
@@ -81,6 +82,7 @@ function Profile() {
     
     return (
         <div className="profile-page-wrapper">
+            <Navbar />
             <div className="profile-page-bg-img"></div>
             <img // SOLELY FOR REF PURPOSES
                 ref={qrCodeRef}
@@ -163,8 +165,8 @@ function Profile() {
                 <div className="avatar">Email: {user?.email}</div>
                 <div className="zenid-right">ZenID: {user?.zencode}</div>
                 <div className="community-btns">
-                    <div className="whatsapp-btn"><a href="">JOIN WHATSAPP GROUP</a></div>
-                    <div className="events-btn">EXPLORE EVENTS</div>
+                    <div className="whatsapp-btn"><a href="https://chat.whatsapp.com/FTg4pC47NHgIvjtiniMolB?mode=ems_copy_t">JOIN WHATSAPP GROUP</a></div>
+                    <div className="events-btn"><a href="/#events">EXPLORE EVENTS</a></div>
                     <div className="pay-btn"><a href="https://forms.gle/psXnSyou92JLi6s5A">Proceed To Payment</a></div>
 
                 </div>

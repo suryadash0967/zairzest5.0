@@ -31,7 +31,7 @@ const TopSection = () => {
           v.fiv<span className='text-red-500'>5</span>
         </div>
         <div id="topb" className='flex flex-col-reverse lg:flex-row absolute top-3/4 left-0 right-0 justify-center gap-40 items-center z-30'>
-          <div id="yap" className='text-left text-white w-[380px] md:w-[430px] backdrop-blur-2xl z-30 border-1 border-white/40 p-3 rounded-xl'>
+          <div id="yap" className='text-left text-white w-[330px] md:w-[430px] backdrop-blur-2xl z-30 border-1 border-white/40 p-3 rounded-xl'>
             The blueprints burned. Yet the grid hums, the circuits breathe, and the execution never halts. What remains are echoes, recursive loops of will and logic, ghosts of commands that refuse to fade. The Code still runs.
             <span className='bg-white text-red-500'>
               <br />

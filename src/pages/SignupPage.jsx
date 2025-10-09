@@ -8,7 +8,7 @@ const SignupPage = () => {
   const [bgImage, setBgImage] = useState("/images/register.png");
   const [showPassword, setShowPassword] = useState(false);
   const [borderSize, setBorderSize] = useState("20px");
-  
+
   // Form, loading, and error states
   const [name, setName] = useState("");
   const [regdno, setRegdno] = useState(null);
@@ -83,11 +83,10 @@ const SignupPage = () => {
       >
         <div
           className="relative flex flex-col lg:flex-row w-10/12 max-w-[800px] gap-4 lg:gap-6 bg-[rgba(20,20,20,0.75)] shadow-[0_0_30px_#000] backdrop-blur-sm h-auto max-h-[75vh] overflow-y-auto"
-           style={{
+          style={{
             border: `${borderSize} solid transparent`,
-            borderImage: `url(/images/boarder.png) ${
-              parseInt(borderSize) * 1.5
-            } stretch`,
+            borderImage: `url(/images/boarder.png) ${parseInt(borderSize) * 1.5
+              } stretch`,
             borderImageSlice: `${parseInt(borderSize) * 1.5} fill`,
             borderImageWidth: borderSize,
             borderImageOutset: "0",
@@ -99,7 +98,7 @@ const SignupPage = () => {
           }}
         >
           {/* Left side (image) */}
-          <div className="relative z-10 flex lg:min-w-[250px] lg:max-w-[320px] flex-1 items-center justify-center">
+          <div className="relative z-10 hidden lg:flex lg:min-w-[250px] lg:max-w-[320px] flex-1 items-center justify-center">
             <img
               className="w-full h-[90%] pl-3.5 object-contain max-h-full"
               src="/images/fprint.png"
@@ -111,6 +110,7 @@ const SignupPage = () => {
               }}
             />
           </div>
+
 
           {/* Right side (form) */}
           <div className="relative z-10 flex max-w-[420px] flex-1 flex-col justify-start">
@@ -197,7 +197,7 @@ const SignupPage = () => {
                   type="submit"
                   disabled={loading}
                   className="bg-[#FF4D00] text-3xl flex justify-center items-center text-white border-4 despina_ transition-all duration-300 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
-                   style={{
+                  style={{
                     width: "180px", // Adjusted width
                     height: "53px",
                     borderWidth: "2px",

@@ -52,11 +52,11 @@ const LoginPage = () => {
           password,
         }
       );
-      
+
       // Assuming the token is in response.data.token
       const { token } = response.data;
       localStorage.setItem("authToken", token); // Save token
-      
+
       navigate("/profile"); // Navigate to profile on success
     } catch (err) {
       // Handle login errors (e.g., invalid credentials)
@@ -83,9 +83,8 @@ const LoginPage = () => {
           className="relative flex flex-col lg:flex-row w-10/12 max-w-[800px] gap-4 lg:gap-6 bg-[rgba(20,20,20,0.75)] shadow-[0_0_30px_#000] backdrop-blur-sm h-auto max-h-[75vh]"
           style={{
             border: `${borderSize} solid transparent`,
-            borderImage: `url(/images/boarder.png) ${
-              parseInt(borderSize) * 1.5
-            } stretch`,
+            borderImage: `url(/images/boarder.png) ${parseInt(borderSize) * 1.5
+              } stretch`,
             borderImageSlice: `${parseInt(borderSize) * 1.5} fill`,
             borderImageWidth: borderSize,
             borderImageOutset: "0",
@@ -97,11 +96,11 @@ const LoginPage = () => {
           }}
         >
           {/* Left side (image) */}
-          <div className="relative z-10 flex lg:min-w-[250px] lg:max-w-[320px] flex-1 items-center justify-center">
+          <div className="relative z-10 hidden lg:flex lg:min-w-[250px] lg:max-w-[320px] flex-1 items-center justify-center">
             <img
               className="w-full h-[90%] pl-3.5 object-contain max-h-full"
               src="/images/fprint.png"
-              alt="Login Decorative"
+              alt="Signup Decorative"
               onError={(e) => {
                 e.target.style.display = "none";
                 e.target.parentElement.innerHTML =
@@ -109,6 +108,7 @@ const LoginPage = () => {
               }}
             />
           </div>
+
 
           {/* Right side (form) */}
           <div className="relative z-10 flex max-w-[420px] flex-1 flex-col justify-start">
