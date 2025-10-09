@@ -512,7 +512,7 @@ body {
 }
 
 .zenid-text {
-  width: 5.2rem;
+  width: 5.7rem;
   font-size: 20px;
 }
 
@@ -574,12 +574,14 @@ body {
 }
 
 .community-btns {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
 
 .whatsapp-btn,
-.events-btn {
+.events-btn,
+.pay-btn {
   padding: 0.5rem 1rem;
   font-family: Despina;
   font-size: 25px;
@@ -599,10 +601,21 @@ body {
   border: 2px solid #fff;
 }
 
+.pay-btn {
+  background-color: #00c853;
+  border: 2px solid #00c853;
+}
+
 .note {
   font-family: Space Grotesk;
   margin-top: 1rem;
 }
+
+
+.pay-btn {
+  margin-top: 0;
+}
+
 
 /* -----------
     EVENTS
@@ -1232,6 +1245,9 @@ body {
   .zenid-right,
   .avatar {
     font-size: 16px;
+    text-align: center;
+    margin: 10px 0;
+  
   }
 
   .whatsapp-btn,

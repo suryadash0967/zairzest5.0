@@ -21,9 +21,7 @@ function Explore() {
         Explore the Events
       </div>
       <div className="explore-desc">
-        Everything has been made simple for you to scroll around and get the most
-
-out of the options available.
+        Everything has been made simple for you to scroll around and get the most out of the options available.
       </div>
 
       <div className="tech-fun-wrapper">

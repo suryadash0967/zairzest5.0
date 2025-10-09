@@ -116,7 +116,7 @@ function Profile() {
                             <div className="zenid-text">ZEN-ID</div>
                             <div className="zenid-line"></div>
                              {/* --- DYNAMIC DATA: ZenID --- */}
-                            <div className="zenid-num">{user?.zenId || 'Z-ID-MISSING'}</div>
+                            <div className="zenid-num">{user?.zencode || 'Z-ID-MISSING'}</div>
                         </div>
                         <div className="flip-text">[FLIP TO REVEAL ZEN-CODE]</div>
                     </div>
@@ -147,7 +147,7 @@ function Profile() {
                                 <div className="zenid-text">ZEN-ID</div>
                                 <div className="zenid-line"></div>
                                 {/* --- DYNAMIC DATA: ZenID --- */}
-                                <div className="zenid-num">{user?.zenId || 'Z-ID-MISSING'}</div>
+                                <div className="zenid-num">{user?.zencode || 'Z-ID-MISSING'}</div>
                             </div>
                             <div className="flip-text">[FLIP TO REVEAL IDENTITY]</div>
                         </div>
@@ -161,10 +161,12 @@ function Profile() {
                 {/* --- DYNAMIC DATA --- */}
                 <div className="name">Name: {user?.name}</div>
                 <div className="avatar">Email: {user?.email}</div>
-                <div className="zenid-right">ZenID: {user?.zenId}</div>
+                <div className="zenid-right">ZenID: {user?.zencode}</div>
                 <div className="community-btns">
                     <div className="whatsapp-btn"><a href="">JOIN WHATSAPP GROUP</a></div>
                     <div className="events-btn">EXPLORE EVENTS</div>
+                    <div className="pay-btn"><a href="https://forms.gle/psXnSyou92JLi6s5A">Proceed To Payment</a></div>
+
                 </div>
                 <div className="note">Note: ZenCode is sent via your registered mail aswell</div>
             </div>

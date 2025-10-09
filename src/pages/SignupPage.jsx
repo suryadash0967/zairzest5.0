@@ -11,13 +11,13 @@ const SignupPage = () => {
   
   // Form, loading, and error states
   const [name, setName] = useState("");
-  const [regdNo, setRegdNo] = useState("");
-  const [gender, setGender] = useState("");
+  const [regdno, setRegdno] = useState(null);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const gender = "male";
 
   useEffect(() => {
     const handleResize = () => {
@@ -40,7 +40,7 @@ const SignupPage = () => {
   // Handle registration logic
   const onRegister = async (e) => {
     e.preventDefault();
-    if (!name || !regdNo || !gender || !email || !password) {
+    if (!name || !regdno || !email || !password) {
       setError("Please fill out all fields.");
       return;
     }
@@ -50,12 +50,13 @@ const SignupPage = () => {
     try {
       await axios.post(
         "https://zairzest-backend-2025-01-1.onrender.com/api/users/create/user",
+        // "http://localahost:4000/api/users/create/user",
         {
           name,
-          regdNo,
-          gender,
+          regdno,
           email,
           password,
+          gender
         }
       );
       // On success, navigate to the login page
@@ -139,22 +140,10 @@ const SignupPage = () => {
                   <input
                     type="text"
                     placeholder="Regd No."
-                    value={regdNo}
-                    onChange={(e) => setRegdNo(e.target.value)}
+                    value={regdno}
+                    onChange={(e) => setRegdno(e.target.value)}
                     className="w-full rounded-md border-2 border-white/30  px-3 py-2.5 text-sm text-white placeholder-white/60 outline-none transition-all duration-300 focus:border-orange-500 focus:bg-white/10 focus:shadow-lg hover:border-white/50"
                   />
-                </div>
-                <div className="relative flex-1 molde_ px-0.5">
-                  <select
-                    value={gender}
-                    onChange={(e) => setGender(e.target.value)}
-                    className="w-full rounded-md border-2 border-white/30  px-3 py-2.5 text-sm text-white/50 outline-none transition-all duration-300 focus:border-orange-500 focus:bg-white/10 focus:shadow-lg hover:border-white/50"
-                  >
-                    <option value="" className="bg-gray-800">Gender</option>
-                    <option value="male" className="bg-gray-800">Male</option>
-                    <option value="female" className="bg-gray-800">Female</option>
-                    <option value="other" className="bg-gray-800">Other</option>
-                  </select>
                 </div>
               </div>
 
