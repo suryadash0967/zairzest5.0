@@ -88,11 +88,11 @@ const TopSection = () => {
 
         <div
           id="topb"
-          className='flex lg:flex-row absolute top-[55%] left-0 right-0 justify-center gap-0 items-center z-30'
+          className='flex lg:flex-row absolute top-[72%] md:top-[65%] left-0 right-0 justify-center gap-[11%] items-center z-30'
         >
           <div
             id="yap"
-            className='text-left text-white w-[330px] md:w-[430px] backdrop-blur-2xl z-30 border-1 border-white/40 p-3 rounded-xl'
+            className='molde_ text-left text-white text-[13px] md:text-[14px] w-[320px] md:w-[430px] backdrop-blur-2xl z-30 border-1 border-white/40 p-3 rounded-xl'
           >
             The blueprints burned. Yet the grid hums, the circuits breathe, and the execution never halts. What remains are echoes, recursive loops of will and logic, ghosts of commands that refuse to fade. The Code still runs.
             <span className='bg-white text-red-500'>
