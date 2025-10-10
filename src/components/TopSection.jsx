@@ -34,6 +34,7 @@ const TopSection = () => {
       }}
     >
       <LogoSequence />
+      <img src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074315/girlBack_rwm1u7.png" id="Baddie-bot" alt="Baddie" className="hero-section-img" />
 
       {/* Baddie image: zoom out (scale up) + fade out */}
       <img

@@ -35,7 +35,7 @@ const Footer = () => {
             </div>
 
           </div>
-          <div className="by-zairza">An event by &nbsp;&nbsp; <img src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074322/techevents_gyhidg.png" alt="" /></div>
+          <div className="by-zairza">An event by &nbsp;&nbsp; <img src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074322/zairza-logo_ipfpsz.png" alt="" /></div>
         </div>
       </div>
     </div>
