@@ -20,7 +20,7 @@ const LogoSequence = () => {
   }, [totalFrames]);
 
   return (
-    <div className="flex items-end justify-center absolute top-[25px] left-1/2 -translate-x-1/2">
+    <div className="flex items-end justify-center absolute z-20 top-[25px] left-1/2 -translate-x-1/2">
       <div className="relative flex items-end w-[350px] md:w-[400px] lg:w-[500px]">
         {images.map((img, index) => (
           <img

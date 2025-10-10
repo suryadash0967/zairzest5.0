@@ -175,10 +175,12 @@ body {
 	background: #1a1a1a;
 	box-shadow: 0 0 5px #ffffff40, 0 0 18px #ffffff40, 0 0 25px #ffffff40;
 	height: 95%;
+	border-radius: 10px;
 	transition: box-shadow 0.2s ease-in-out;
 }
 
 .events-card:nth-of-type(2) img {
+	border-radius: 10px;
 	background: #1a1a1a;
 	box-shadow: 0 0 5px #ffffff5e, 0 0 18px #ffffff5e, 0 0 25px #ffffff5e;
 	height: 95%;
@@ -204,11 +206,13 @@ body {
 	transform: translateX(-50%);
 	max-width: 780px;
 	z-index: 20;
+
 }
 
 @media (max-width: 768px) {
 	.hero-section-img {
-		max-width: 650px;
+		width: 650px;
+		/* height: 90% !important; */
 	}
 }
 

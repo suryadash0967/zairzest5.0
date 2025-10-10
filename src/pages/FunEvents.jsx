@@ -42,7 +42,7 @@ function FunEvents() {
       description: "Think you're a tech wizard? Time to prove it! Navigate through layers of cryptic codes, steganography puzzles, and mind-bending technical riddles that'll test every byte of your brainpower. Each clue unlocks the next—crack them fast or watch your rivals surge ahead. From hidden links to debugging nightmares, every challenge pushes your limits harder than the last. Solo or squad up, it's a race against time where logic meets chaos. Can you decode, debug, and dominate your way to the treasure? The hunt begins now—may the sharpest mind win!",
     },
     {
-      title: 'Jamming Night',
+      title: 'Cultural Night',
       date: '16 Oct - 4:30pm onwards',
       venue: 'Stage Area',
       imageURL: "https://res.cloudinary.com/dl7eukvd3/image/upload/v1760092767/event_card_jamming_vhqsgx.png",
