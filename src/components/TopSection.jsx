@@ -61,21 +61,27 @@ const TopSection = () => {
       <div className='absolute inset-0 flex items-center flex-col justify-between px-auto'>
         <div
           id='zairzest'
-          className='absolute text-[35vw] sm:text-[230px] top-0 w-full text-center z-10 lg:text-[360px] md:text-[280px] xl:text-[420px]'
+          className='absolute text-[35vw] sm:text-[230px] top-5 md:top-0 w-full text-center z-10 lg:text-[360px] md:text-[280px] xl:text-[420px]'
         >
           ZAIRZEST
         </div>
 
         <div
           id='zairzestunfill'
-          className='absolute text-[35vw] sm:text-[230px] top-0 w-full text-center z-20 md:text-[280px] lg:text-[360px] xl:text-[420px]'
+          className='absolute text-[35vw] sm:text-[230px] top-5 md:top-0 w-full text-center z-20 md:text-[280px] lg:text-[360px] xl:text-[420px]'
         >
           ZAIRZEST
         </div>
 
         <div
           id='fivebelow'
-          className='absolute text-[80px] top-[calc(35vw+30px)] md:top-[calc(230px+90px)] right-2 sm:right-16 lg:hidden z-20'
+          className='absolute text-[40px] top-[calc(35vw+30px)] md:top-[calc(230px+90px)] right-2 sm:right-16 lg:hidden z-10'
+        >
+          v.fiv<span className='text-red-500'>5</span>
+        </div>
+        <div
+          id='fivefilled'
+          className='absolute text-[40px] top-[calc(35vw+30px)] md:top-[calc(230px+90px)] right-2 sm:right-16 lg:hidden z-20'
         >
           v.fiv<span className='text-red-500'>5</span>
         </div>
@@ -95,7 +101,7 @@ const TopSection = () => {
             </span>
           </div>
 
-          <div id='five' className='hidden lg:block text-[150px] z-30'>
+            <div id='five' className='hidden lg:block text-[150px] z-30 absolute top-[calc(35vw+30px)] md:top-[calc(-90px)] right-2 sm:right-16'>
             v.fiv<span className='text-red-500'>5</span>
           </div>
         </div>

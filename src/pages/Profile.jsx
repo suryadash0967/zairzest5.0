@@ -100,12 +100,12 @@ function Profile() {
                         <img src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074320/profile_img_2_bizoju.png" alt="Profile" className="profile-img img2" />
                     </div>
                     <div className="profile-img-desc">
-                        <div className="qrcode image-mf">
+                        <div className="qrcode image-mf" style={{width: "100%"}}>
                             {/* --- DYNAMIC DATA: User's avatar/image can go here --- */}
                             <img src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074320/profile_img_f_sraceb.png" alt="" className="profile-img-mf" style={{ width: qrCodeWidth ? `${qrCodeWidth}px` : 'auto' }} />
                         </div>
-                        <div className="glow-border"></div>
-                        <div className="realid">
+                        <div className="glow-border" style={{width: "100%"}}></div>
+                        <div className="realid" style={{width: "100%"}}>
                             <div className="realid-left">
                                 <div>REAL IDENTITY</div>
                                 {/* --- DYNAMIC DATA: User Name --- */}
@@ -113,14 +113,14 @@ function Profile() {
                             </div>
                             <div className="realid-right">{/* Your ID logic here */}</div>
                         </div>
-                        <div className="glow-border"></div>
-                        <div className="zenid-wrapper">
+                        <div className="glow-border" style={{width: "100%"}}></div>
+                        <div className="zenid-wrapper" style={{width: "100%"}}>
                             <div className="zenid-text">ZEN-ID</div>
                             <div className="zenid-line"></div>
                              {/* --- DYNAMIC DATA: ZenID --- */}
-                            <div className="zenid-num">{user?.zencode || 'Z-ID-MISSING'}</div>
+                            <div className="zenid-num">{user?.zencode || 'ZEN-ID-MISSING'}</div>
                         </div>
-                        <div className="flip-text">[FLIP TO REVEAL ZEN-CODE]</div>
+                        <div className="flip-text">[FLIP TO REVEAL ZEN-SPACE]</div>
                     </div>
                 </div>
 

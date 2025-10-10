@@ -71,7 +71,7 @@ const LoginPage = () => {
     <>
       <Navbar />
       <div
-        className="w-full h-[100vh] text-white relative flex justify-center items-center"
+        className="w-full min-h-screen text-white absolute flex justify-center items-center "
         style={{
           backgroundImage: `url(${bgImage})`,
           backgroundSize: "cover",

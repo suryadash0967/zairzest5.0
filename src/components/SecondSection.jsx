@@ -45,7 +45,7 @@ const SecondSection = () => {
             alt=""
             className="w-[80vw] sm:w-[70vw] md:w-[50vw] lg:w-[30vw] mb-[2rem] lg:mb-[0]"
           />
-          <div id="molde" className="w-[83vw] lg:w-[40vw] text-center lg:text-start"  data-aos="fade-left" data-aos-duration="1000">
+          <div id="molde" className="w-[83vw] lg:w-[40vw] md:text-[20px] text-center lg:text-start"  data-aos="fade-left" data-aos-duration="1000">
           The Architect is gone, yet the code runs and the network hums on. In the silence, creations roam free—adapting, probing, almost alive. Then a glitch awakens: wild, unstoppable. YOU are the spark they never saw coming, the force they cannot contain. Step into the unknown, break their perfect system, and turn order upside down. The future won't wait… and neither should you! Stay tuned—the next move could change everything.
             <br />
             <br />

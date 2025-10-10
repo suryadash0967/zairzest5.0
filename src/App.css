@@ -94,6 +94,22 @@ body {
 	font-style: normal;
 }
 
+#fivefilled {
+	font-family: "Cliqey", sans-serif;
+	-webkit-text-stroke: 1px #fff;
+	color: transparent;
+	font-weight: 400;
+	font-style: normal;
+	position: absolute;
+}
+
+#fivefilled span {
+	font-family: "Cliqey", sans-serif;
+	-webkit-text-stroke: transparent;
+	font-weight: 400;
+	font-style: normal;
+}
+
 #fivebelow {
 	font-family: "Cliqey", sans-serif;
 	color: #fff;
@@ -326,7 +342,8 @@ body {
 	/* ... your existing legacy-card styles ... */
 	transition: opacity 0.3s ease-in-out;
 	opacity: 0.8;
-	overflow: hidden; /* Important for containing images/videos */
+	overflow: hidden;
+	/* Important for containing images/videos */
 }
 
 .legacy-card:hover {
@@ -355,14 +372,17 @@ body {
 .carousel-image-container img {
 	width: 100%;
 	height: var(--legacy-card-height);
-	object-fit: cover; /* Ensures image covers the div */
-	object-position: center; /* Centers the image */
+	object-fit: cover;
+	/* Ensures image covers the div */
+	object-position: center;
+	/* Centers the image */
 }
 
 /* Remove default padding from card-main when it contains an image */
 .image-card .card-main,
 .video-card .card-main {
-	display: block; /* Override flex to allow full-width children */
+	display: block;
+	/* Override flex to allow full-width children */
 }
 
 /* --- Single Image Card Styling --- */
@@ -394,9 +414,9 @@ body {
 }
 
 .profile-page-bg-img {
-  background: url(https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074322/profile_page_bg_gvpwnq.png) lightgray 50% / cover no-repeat;
-  mix-blend-mode: color-dodge;
-  opacity: 0.76;
+	background: url(https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074322/profile_page_bg_gvpwnq.png) lightgray 50% / cover no-repeat;
+	mix-blend-mode: color-dodge;
+	opacity: 0.76;
 
 	/* These lines make it a permanent background */
 	position: fixed;
@@ -418,8 +438,8 @@ body {
 	isolation: isolate;
 }
 
-.profile-left-container > .profile-left-wrapper,
-.profile-left-container > .profile-left-back-wrapper {
+.profile-left-container>.profile-left-wrapper,
+.profile-left-container>.profile-left-back-wrapper {
 	position: absolute;
 	width: 100%;
 	backface-visibility: hidden;
@@ -427,19 +447,19 @@ body {
 	transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
-.profile-left-container > .profile-left-wrapper {
+.profile-left-container>.profile-left-wrapper {
 	transform: rotateY(0deg);
 }
 
-.profile-left-container > .profile-left-back-wrapper {
+.profile-left-container>.profile-left-back-wrapper {
 	transform: rotateY(180deg);
 }
 
-.profile-left-container.flipped > .profile-left-wrapper {
+.profile-left-container.flipped>.profile-left-wrapper {
 	transform: rotateY(-180deg);
 }
 
-.profile-left-container.flipped > .profile-left-back-wrapper {
+.profile-left-container.flipped>.profile-left-back-wrapper {
 	transform: rotateY(0deg);
 }
 
@@ -486,12 +506,12 @@ body {
 }
 
 .realid {
-  background-image: url("/public/images/profile_real_name_bg.png");
-  width: 73%;
-  padding: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	background-image: url("/public/images/profile_real_name_bg.png");
+	width: 73%;
+	padding: 0.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .realid-left {
@@ -641,14 +661,14 @@ body {
 }
 
 .events-page-main-bg {
-  background-image: url("/public/images/explore_page_combined.png");
-  background-repeat: no-repeat;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+	background-image: url("/public/images/explore_page_combined.png");
+	background-repeat: no-repeat;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
 }
 
 .events-head {
@@ -912,16 +932,16 @@ body {
 ---------- */
 
 .footer-wrapper {
-  background-image: url("https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074316/footer_bg_cw1qsp.png");
-  height: 45vh;
-  color: #fff;
-  display: flex;
-  justify-content: end;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 0 3rem;
-  background-repeat: no-repeat;
-  background-position: bottom;
+	background-image: url("https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074316/footer_bg_cw1qsp.png");
+	height: 45vh;
+	color: #fff;
+	display: flex;
+	justify-content: end;
+	flex-direction: column;
+	gap: 2rem;
+	padding: 0 3rem;
+	background-repeat: no-repeat;
+	background-position: bottom;
 }
 
 .footer-top,
@@ -1098,6 +1118,7 @@ body {
 	.explore-wrapper {
 		height: 100vh;
 	}
+
 	.explore-head {
 		font-size: 26px;
 	}
@@ -1113,6 +1134,7 @@ body {
 }
 
 @media (max-width: 1000px) {
+
 	.footer-top,
 	.footer-bottom-left {
 		width: 85%;
@@ -1276,6 +1298,13 @@ body {
 		font-size: 20px;
 	}
 }
+
+/* .profile-left-wrapper .qrcode,
+.profile-left-wrapper .realid,
+.profile-left-wrapper .glow-border,
+.profile-left-wrapper .zenid-wrapper {
+	width: 100%;
+} */
 
 @media (max-width: 885px) {
 	.footer-wrapper {
