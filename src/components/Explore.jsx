@@ -9,7 +9,7 @@ function Explore() {
       id="events"
       style={{
         width: '100%',
-        backgroundImage: 'url(/images/explore_page_combined.png)',
+        backgroundImage: 'url("https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074314/explore_page_combined_odzffj.png")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -26,14 +26,14 @@ function Explore() {
 
       <div className="tech-fun-wrapper">
         <a className="events-card"  onClick={() => navigate("/tech-events")}>
-          <img src="/images/techevents.png" alt="" />
+          <img src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074322/techevents_gyhidg.png" alt="" />
           <div className="events-desc">
             <p>Know more about</p>
             <div>TECH EVENTS</div>
           </div>
         </a>
         <a className="events-card" onClick={() => navigate("/fun-events")}>
-          <img src="/images/funevents.png" alt="" />
+          <img src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074315/funevents_cp6nba.png" alt="" />
           <div className="events-desc">
             <p>Know more about</p>
             <div>FUN EVENTS</div>

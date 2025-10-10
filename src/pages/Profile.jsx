@@ -86,7 +86,7 @@ function Profile() {
             <div className="profile-page-bg-img"></div>
             <img // SOLELY FOR REF PURPOSES
                 ref={qrCodeRef}
-                src="/images/profile_qrcode.png"
+                src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074321/profile_qrcode_p91j8o.png"
                 alt="measurement helper"
                 style={{ position: 'absolute', visibility: 'hidden', zIndex: -1 }}
             />
@@ -96,13 +96,13 @@ function Profile() {
             >
                 <div className="profile-left-wrapper">
                     <div className="left-img-wrapper">
-                        <img src="/images/profile_img_1.png" alt="Profile" className="profile-img img1" />
-                        <img src="/images/profile_img_2.png" alt="Profile" className="profile-img img2" />
+                        <img src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074320/profile_img_1_hdk9nn.png" alt="Profile" className="profile-img img1" />
+                        <img src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074320/profile_img_2_bizoju.png" alt="Profile" className="profile-img img2" />
                     </div>
                     <div className="profile-img-desc">
                         <div className="qrcode image-mf">
                             {/* --- DYNAMIC DATA: User's avatar/image can go here --- */}
-                            <img src="/images/profile_img_f.png" alt="" className="profile-img-mf" style={{ width: qrCodeWidth ? `${qrCodeWidth}px` : 'auto' }} />
+                            <img src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074320/profile_img_f_sraceb.png" alt="" className="profile-img-mf" style={{ width: qrCodeWidth ? `${qrCodeWidth}px` : 'auto' }} />
                         </div>
                         <div className="glow-border"></div>
                         <div className="realid">
@@ -127,13 +127,13 @@ function Profile() {
                 <div className="profile-left-back-wrapper">
                     <div className="profile-left-wrapper">
                         <div className="left-img-wrapper">
-                            <img src="/images/profile_img_1.png" alt="Profile" className="profile-img img1" />
-                            <img src="/images/profile_img_2.png" alt="Profile" className="profile-img img2" />
+                            <img src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074320/profile_img_1_hdk9nn.png" alt="Profile" className="profile-img img1" />
+                            <img src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074320/profile_img_2_bizoju.png" alt="Profile" className="profile-img img2" />
                         </div>
                         <div className="profile-img-desc">
                             <div className="qrcode">
                                 {/* --- DYNAMIC DATA: QR Code from user data --- */}
-                                <img src={user?.qrCode || "/images/profile_qrcode.png"} alt="QR Code" className="qrcode-img" />
+                                <img src={user?.qrCode || "https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074321/profile_qrcode_p91j8o.png"} alt="QR Code" className="qrcode-img" />
                             </div>
                             <div className="glow-border"></div>
                              <div className="realid">

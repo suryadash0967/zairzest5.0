@@ -7,7 +7,7 @@ const TopSection = () => {
       style={{
         width: '100vw',
         height: '100vh',
-        backgroundImage: 'url(/images/bgTop.png)',
+        backgroundImage: 'url("https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074314/bgTop_uwvnuy.png")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -16,7 +16,7 @@ const TopSection = () => {
       }}
     >
       <LogoSequence />
-      <img src="/images/girlBack.png" alt="Baddie" className="hero-section-img" />
+      <img src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074315/girlBack_rwm1u7.png" alt="Baddie" className="hero-section-img" />
 
       <div className='absolute inset-0 flex items-center flex-col justify-between px-auto' >
 

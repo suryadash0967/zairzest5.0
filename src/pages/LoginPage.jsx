@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios"; // Import axios
 
 const LoginPage = () => {
-  const [bgImage, setBgImage] = useState("/images/login.png");
+  const [bgImage, setBgImage] = useState("https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074321/login_khvnra.png");
   const [showPassword, setShowPassword] = useState(false);
   const [borderSize, setBorderSize] = useState("16px");
 
@@ -19,13 +19,13 @@ const LoginPage = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
-        setBgImage("/images/login.png");
+        setBgImage("https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074321/login_khvnra.png");
         setBorderSize("8px");
       } else if (window.innerWidth < 1024) {
-        setBgImage("/images/login.png");
+        setBgImage("https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074321/login_khvnra.png");
         setBorderSize("12px");
       } else {
-        setBgImage("/images/login.png");
+        setBgImage("https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074321/login_khvnra.png");
         setBorderSize("16px");
       }
     };
@@ -83,7 +83,7 @@ const LoginPage = () => {
           className="relative flex flex-col lg:flex-row w-10/12 max-w-[800px] gap-4 lg:gap-6 bg-[rgba(20,20,20,0.75)] shadow-[0_0_30px_#000] backdrop-blur-sm h-auto max-h-[75vh]"
           style={{
             border: `${borderSize} solid transparent`,
-            borderImage: `url(/images/boarder.png) ${parseInt(borderSize) * 1.5
+            borderImage: `url("https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074313/boarder_keyi5c.png) ${parseInt(borderSize) * 1.5
               } stretch`,
             borderImageSlice: `${parseInt(borderSize) * 1.5} fill`,
             borderImageWidth: borderSize,
@@ -99,7 +99,7 @@ const LoginPage = () => {
           <div className="relative z-10 hidden lg:flex lg:min-w-[250px] lg:max-w-[320px] flex-1 items-center justify-center">
             <img
               className="w-full h-[90%] pl-3.5 object-contain max-h-full"
-              src="/images/fprint.png"
+              src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074315/fprint_qbrb6c.png"
               alt="Signup Decorative"
               onError={(e) => {
                 e.target.style.display = "none";

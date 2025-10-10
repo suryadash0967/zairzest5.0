@@ -2,15 +2,15 @@ import React, { useState, useEffect } from 'react'
 import Navbar from './Navbar'
 
 const SecondSection = () => {
-  const [bgImage, setBgImage] = useState('/images/Zenbg.png')
+  const [bgImage, setBgImage] = useState('https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074323/Zenbg_ssd1kq.png')
 
   useEffect(() => {
     // function to set image based on screen size
     const handleResize = () => {
       if (window.innerWidth < 768) {
-        setBgImage('/images/zen_bg_phone.png')
+        setBgImage('https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074323/zen_bg_phone_ohmed0.png')
       } else {
-        setBgImage('/images/Zenbg.png')
+        setBgImage('https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074323/Zenbg_ssd1kq.png')
       }
     }
 
@@ -41,7 +41,7 @@ const SecondSection = () => {
         >
           <img
             id="biometric"
-            src="/images/zenchar.png"
+            src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074323/zenchar_b9xgss.png"
             alt=""
             className="w-[80vw] sm:w-[70vw] md:w-[50vw] lg:w-[30vw] mb-[2rem] lg:mb-[0]"
           />

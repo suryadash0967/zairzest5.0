@@ -116,7 +116,6 @@ const Navbar = () => {
                 return (
                   <>
                     <li className={navLinkClass} onClick={() => handleNavigation("/profile")}>Profile</li>
-                    <li className={navLinkClass} onClick={handleLogout}>Logout</li>
                   </>
                 );
               } else {
@@ -139,7 +138,7 @@ const Navbar = () => {
           aria-label="Toggle mobile menu"
         >
           <img
-            src={isMobileMenuOpen ? "/images/close-sidebar.png" : "/images/open-sidebar.png"}
+            src={isMobileMenuOpen ? "https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074314/close-sidebar_weuic4.png" : "https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074320/open-sidebar_cbioik.png"}
             alt={isMobileMenuOpen ? "Close sidebar" : "Open sidebar"}
             className={`object-contain transition-all duration-300 ease-in-out hover:opacity-80 ${isMobileMenuOpen ? "w-6 h-6 sm:w-7 sm:h-7" : "w-8 h-8 sm:w-10 sm:h-10"}`}
           />
@@ -194,7 +193,7 @@ const Navbar = () => {
             </nav>
             <div className="flex items-center justify-start mb-5">
               <img
-                src="/images/zairza.png"
+                src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074322/zairza_ren6y1.png"
                 alt="ZAIRZA"
                 className="w-30 sm:w-28 h-auto object-contain"
               />

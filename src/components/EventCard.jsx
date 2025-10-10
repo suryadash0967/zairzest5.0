@@ -3,12 +3,12 @@ function EventCard({ title, date, venue, isFlipped, onFlip, description }) {
     <div className={`profile-left-container ${isFlipped ? 'flipped' : ''}`}>
       <div className="profile-left-wrapper">
         <div className="left-img-wrapper events-img-wrapper">
-          <img src="/images/events_img_1.png" alt="events" className="profile-img events-img img1" />
-          <img src="/images/events_img_2.png" alt="events" className="profile-img events-img img2" />
+          <img src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074314/events_img_1_ijmbpd.png" alt="events" className="profile-img events-img img1" />
+          <img src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074312/events_img_2_qxqjxg.png" alt="events" className="profile-img events-img img2" />
         </div>
         <div className="profile-img-desc">
           <div className="event-card-img">
-            <img src="/images/event_card_img_1.png" className='event-card-image' alt="" />
+            <img src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074314/event_card_img_1_f1hd2y.png" className='event-card-image' alt="" />
           </div>
           <div className="event-name-wrapper">
             <div className="event-name">{title}</div>
@@ -30,8 +30,8 @@ function EventCard({ title, date, venue, isFlipped, onFlip, description }) {
       <div className="profile-left-back-wrapper">
         <div className="profile-left-wrapper">
           <div className="left-img-wrapper">
-            <img src="/images/events_img_1.png" alt="events" className="profile-img events-img img1" />
-            <img src="/images/events_img_2.png" alt="events" className="profile-img events-img img2" />
+            <img src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074314/events_img_1_ijmbpd.png" alt="events" className="profile-img events-img img1" />
+            <img src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074312/events_img_2_qxqjxg.png" alt="events" className="profile-img events-img img2" />
           </div>
           <div className="profile-img-desc">  
             <div className="event-back-desc">

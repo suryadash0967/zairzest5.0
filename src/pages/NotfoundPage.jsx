@@ -5,7 +5,7 @@ const NotfoundPage = () => {
   const navigate = useNavigate();
   return (
     <div className="w-full h-[100vh] flex flex-col items-center justify-center bg-gradient-to-br from-black via-[#1a1a1a] to-[#FF4D00] text-white relative">
-      <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('/images/register.png')] bg-cover bg-center pointer-events-none"></div>
+      <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074322/register_ohutnj.png')] bg-cover bg-center pointer-events-none"></div>
       <div className="relative z-10 flex flex-col items-center justify-center p-8 rounded-2xl shadow-2xl bg-[rgba(20,20,20,0.85)] border-4 border-orange-500">
         <h1 className="text-7xl  despina_ text-orange-500 mb-4 drop-shadow-lg">
           404

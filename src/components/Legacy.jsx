@@ -22,18 +22,20 @@ const ImageCarousel = ({ images }) => {
     <Slider {...settings}>
       {images.map((img, index) => (
         <div key={index} className="carousel-image-container">
-          <img src={`/images/${img}.jpg`} alt={`Carousel image ${index + 1}`} />
+          <img src={`${img}.jpg`} alt={`Carousel image ${index + 1}`} />
         </div>
       ))}
     </Slider>
   );
 };
 
+// https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074313/302_f2hhve.jpg
+
 // Main Legacy Component
 function Legacy() {
-  const zairzest4Images = ["401", "402", "403", "404"];
-  const zairzest3Images = ["301", "302", "303"];
-  const zairzest2Images = ["201", "202", "203"];
+  const zairzest4Images = ["https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074312/401_jxub3i", "https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074312/402_m7zlm0", "https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074313/403_vinenq", "https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074312/404_m3dcjj"];
+  const zairzest3Images = ["https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074311/301_kq1lup", "https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074313/302_f2hhve", "https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074311/303_ennkqd"];
+  const zairzest2Images = ["https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074311/201_umzmaq", "https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074311/202_ud8uut", "https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074311/203_gjbusx"];
 
   return (
     <div className="legacy-wrapper" id="about">
@@ -73,7 +75,7 @@ function Legacy() {
           <div className="legacy-top-right legacy-card video-card">
             <div className="card-main">
               <video autoPlay loop muted playsInline className="legacy-video">
-                <source src="/images/Video-500.mp4" type="video/mp4" />
+                <source src="https://res.cloudinary.com/dzkuia4lg/video/upload/v1760074323/Video-500_fjfjys.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -88,7 +90,7 @@ function Legacy() {
           <div className="legacy-bottom-left">
             <div className="legacy-card image-card">
               <div className="card-main">
-                 <img src="/images/design-domain.png" alt="Design Domains" className="single-image"/>
+                 <img src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074314/design-domain_mfr3tj.png" alt="Design Domains" className="single-image"/>
               </div>
               <div className="legacy-card-bottom">
                 <div>Domains</div>
@@ -97,7 +99,7 @@ function Legacy() {
             </div>
             <div className="footfalls legacy-card">
               <div className="card-main">
-                <img src="/images/footfalls.png" alt="Design Domains" className="single-image"/>
+                <img src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074315/footfalls_ayezih.png" alt="Design Domains" className="single-image"/>
                 </div>
               <div className="legacy-card-bottom">
                 <div>Footfalls</div>

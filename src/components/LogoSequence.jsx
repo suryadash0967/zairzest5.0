@@ -1,20 +1,21 @@
 import { useEffect, useState } from "react";
 
-import frame1 from "/public/images/hero-seq-1.png";
-import frame2 from "/public/images/hero-seq-2.png";
-import frame3 from "/public/images/hero-seq-3.png";
-import frame4 from "/public/images/hero-seq-4.png";
-import frame5 from "/public/images/hero-seq-5.png";
-
 const LogoSequence = () => {
-  const images = [frame1, frame2, frame3, frame4, frame5];
+  const images = [
+    "https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074316/hero-seq-1_vyufku.png",
+    "https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074316/hero-seq-2_n1ibrx.png",
+    "https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074316/hero-seq-3_i9fipa.png",
+    "https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074316/hero-seq-4_co3vl2.png",
+    "https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074316/hero-seq-5_pxfd1r.png",
+  ];
+
   const totalFrames = images.length;
   const [frame, setFrame] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setFrame((prev) => (prev + 1) % totalFrames);
-    }, 500); // adjust speed (ms)
+    }, 500);
     return () => clearInterval(interval);
   }, [totalFrames]);
 
