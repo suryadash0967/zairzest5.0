@@ -58,7 +58,7 @@ const TopSection = () => {
         }}
       />
 
-      <div className='absolute inset-0 flex items-center flex-col justify-between px-auto'>
+      <div className='absolute inset-0 flex items-center flex-col justify-center px-auto'>
         <div
           id='zairzest'
           className='absolute text-[35vw] sm:text-[230px] top-5 md:top-0 w-full text-center z-10 lg:text-[360px] md:text-[280px] xl:text-[420px]'
@@ -75,20 +75,20 @@ const TopSection = () => {
 
         <div
           id='fivebelow'
-          className='absolute text-[40px] top-[calc(35vw+30px)] md:top-[calc(230px+90px)] right-2 sm:right-16 lg:hidden z-10'
+          className='absolute text-[40px] top-[calc(35vw+40px)] md:top-[calc(230px+90px)] right-2 sm:right-16 md:hidden z-10'
         >
           v.fiv<span className='text-red-500'>5</span>
         </div>
         <div
           id='fivefilled'
-          className='absolute text-[40px] top-[calc(35vw+30px)] md:top-[calc(230px+90px)] right-2 sm:right-16 lg:hidden z-20'
+          className='absolute text-[40px] top-[calc(35vw+40px)] md:top-[calc(230px+90px)] right-2 sm:right-16 md:hidden z-20'
         >
           v.fiv<span className='text-red-500'>5</span>
         </div>
 
         <div
           id="topb"
-          className='flex flex-col-reverse lg:flex-row absolute top-3/4 left-0 right-0 justify-center gap-40 items-center z-30'
+          className='flex lg:flex-row absolute top-[55%] left-0 right-0 justify-center gap-0 items-center z-30'
         >
           <div
             id="yap"
@@ -101,7 +101,7 @@ const TopSection = () => {
             </span>
           </div>
 
-            <div id='five' className='hidden lg:block text-[150px] z-30 absolute top-[calc(35vw+30px)] md:top-[calc(-90px)] right-2 sm:right-16'>
+          <div id='five' className='hidden md:block text-[100px] lg:text-[140px] z-30'>
             v.fiv<span className='text-red-500'>5</span>
           </div>
         </div>
