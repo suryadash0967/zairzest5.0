@@ -1,4 +1,4 @@
-function EventCard({ title, date, venue, isFlipped, onFlip, description }) {
+function EventCard({ title, date, venue, isFlipped, onFlip, description, imageURL }) {
   return (
     <div className={`profile-left-container ${isFlipped ? 'flipped' : ''}`}>
       <div className="profile-left-wrapper">
@@ -8,7 +8,7 @@ function EventCard({ title, date, venue, isFlipped, onFlip, description }) {
         </div>
         <div className="profile-img-desc">
           <div className="event-card-img">
-            <img src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074314/event_card_img_1_f1hd2y.png" className='event-card-image' alt="" />
+            <img src={imageURL} className='event-card-image' alt="" />
           </div>
           <div className="event-name-wrapper">
             <div className="event-name">{title}</div>
@@ -37,7 +37,7 @@ function EventCard({ title, date, venue, isFlipped, onFlip, description }) {
             <div className="event-back-desc">
               {description}
             </div>
-            <div className="back-close-btn" onClick={onFlip}>Close</div>
+            <div className="back-close-btn flipped" onClick={onFlip}>Close</div>
           </div>
         </div>
       </div>
