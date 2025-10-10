@@ -15,9 +15,9 @@ const TechEventsPage = lazy(() => import("./pages/TechEvents"));
 function App() {
   const location = useLocation();
 
-  const hideFooterRoutes = ["/footer-hidden-pages"];
+  const hideFooterRoutes = ["/login", "/register", "/profile", "/fun-events", "/tech-events"];
   const shouldShowFooter = 
-  true || // REMOVE THIS LINE IF YOU WANT TO HIDE FOOTER FOR UPPER PAGES
+  // true || // REMOVE THIS LINE IF YOU WANT TO HIDE FOOTER FOR UPPER PAGES
   !hideFooterRoutes.includes(location.pathname);
 
   return (
