@@ -34,7 +34,7 @@ const TopSection = () => {
       }}
     >
       <LogoSequence />
-      <img src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074315/girlBack_rwm1u7.png" id="Baddie-bot" alt="Baddie" className="hero-section-img" />
+      {/* <img src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074315/girlBack_rwm1u7.png" id="Baddie-bot" alt="Baddie" className="hero-section-img" /> */}
 
       {/* Baddie image: zoom out (scale up) + fade out */}
       <img
@@ -95,7 +95,7 @@ const TopSection = () => {
             </span>
           </div>
 
-          <div id='five' className='hidden lg:block text-[80px] z-30'>
+          <div id='five' className='hidden lg:block text-[150px] z-30'>
             v.fiv<span className='text-red-500'>5</span>
           </div>
         </div>

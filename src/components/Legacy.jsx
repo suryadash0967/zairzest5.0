@@ -94,7 +94,7 @@ function Legacy() {
               </div>
               <div className="legacy-card-bottom">
                 <div>Domains</div>
-                <div>X domains</div>
+                <div>8+ domains</div>
               </div>
             </div>
             <div className="footfalls legacy-card">
