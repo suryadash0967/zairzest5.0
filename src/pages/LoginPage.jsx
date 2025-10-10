@@ -172,7 +172,7 @@ const LoginPage = () => {
                   onClick={() => navigate("/register")}
                   className="cursor-pointer font-semibold text-orange-500 hover:text-orange-400 transition-colors underline decoration-orange-500/50 hover:decoration-orange-400"
                 >
-                  Sign Up
+                  Register
                 </a>
               </div>
               <div className="flex justify-center mt-4">
