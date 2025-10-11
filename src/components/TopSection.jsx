@@ -75,24 +75,24 @@ const TopSection = () => {
 
         <div
           id='fivebelow'
-          className='absolute text-[40px] top-[calc(35vw+40px)] md:top-[calc(230px+90px)] right-2 sm:right-16 md:hidden z-10'
+          className='absolute text-[55px] top-[calc(35vw+40px)] md:top-[calc(230px+90px)] right-2 sm:right-16 md:hidden z-10'
         >
           v.fiv<span className='text-red-500'>5</span>
         </div>
         <div
           id='fivefilled'
-          className='absolute text-[40px] top-[calc(35vw+40px)] md:top-[calc(230px+90px)] right-2 sm:right-16 md:hidden z-20'
+          className='absolute text-[55px] top-[calc(35vw+40px)] md:top-[calc(230px+90px)] right-2 sm:right-16 md:hidden z-20'
         >
           v.fiv<span className='text-red-500'>5</span>
         </div>
 
         <div
           id="topb"
-          className='flex lg:flex-row absolute top-[72%] md:top-[65%] left-0 right-0 justify-center gap-[11%] items-center z-30'
+          className='flex lg:flex-row absolute top-[77%] md:top-[68%] left-0 right-0 justify-center gap-[11%] items-center z-30'
         >
           <div
             id="yap"
-            className='molde_ text-left text-white text-[13px] md:text-[14px] w-[320px] md:w-[430px] backdrop-blur-2xl z-30 border-1 border-white/40 p-3 rounded-xl'
+            className='molde_ text-left text-white text-[11px] md:text-[14px] w-[320px] md:w-[430px] backdrop-blur-2xl z-30 border-1 border-white/40 p-3 rounded-xl'
           >
             The blueprints burned. Yet the grid hums, the circuits breathe, and the execution never halts. What remains are echoes, recursive loops of will and logic, ghosts of commands that refuse to fade. The Code still runs.
             <span className='bg-white text-red-500'>
@@ -101,8 +101,8 @@ const TopSection = () => {
             </span>
           </div>
 
-          <div id='five' className='hidden md:block text-[100px] lg:text-[140px] z-30'>
-            v.fiv<span className='text-red-500'>5</span>
+          <div id='five' className='hidden md:block text-[100px] lg:text-[140px] z-30 relative top-[-17px]'>
+            v.fiv<span className='text-red-500' style={{fontSize: "112px"}}>5</span>
           </div>
         </div>
       </div>

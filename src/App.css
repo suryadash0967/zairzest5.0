@@ -290,6 +290,7 @@ body {
 	margin: 0 0 10px 10px;
 	position: absolute;
 	bottom: 0;
+	font-weight: 600;
 }
 
 .card-main {
@@ -880,7 +881,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: #5061ff;
+	color: #fff;
 }
 
 .info-btn i {
