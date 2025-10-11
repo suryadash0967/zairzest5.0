@@ -102,7 +102,8 @@ function Profile() {
                     <div className="profile-img-desc">
                         <div className="qrcode image-mf" style={{width: "100%"}}>
                             {/* --- DYNAMIC DATA: User's avatar/image can go here --- */}
-                            <img src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074320/profile_img_f_sraceb.png" alt="" className="profile-img-mf" style={{ width: qrCodeWidth ? `${qrCodeWidth}px` : 'auto' }} />
+                            {/* <img src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074320/profile_img_f_sraceb.png" alt="" className="profile-img-mf" style={{ width: qrCodeWidth ? `${qrCodeWidth}px` : 'auto' }} /> */}
+                            <img src="https://res.cloudinary.com/dzkuia4lg/image/upload/v1760186037/profile_img_f_cyboso.png" alt="" className="profile-img-mf" style={{ width: qrCodeWidth ? `${qrCodeWidth}px` : 'auto' }} />
                         </div>
                         <div className="glow-border" style={{width: "100%"}}></div>
                         <div className="realid" style={{width: "100%"}}>
