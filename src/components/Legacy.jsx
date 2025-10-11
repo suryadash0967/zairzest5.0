@@ -34,7 +34,7 @@ const ImageCarousel = ({ images }) => {
 // Main Legacy Component
 function Legacy() {
   const zairzest4Images = ["https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074312/401_jxub3i", "https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074312/402_m7zlm0", "https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074313/403_vinenq", "https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074312/404_m3dcjj"];
-  const zairzest3Images = ["https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074311/301_kq1lup", "https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074313/302_f2hhve", "https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074311/303_ennkqd"];
+  const zairzest3Images = ["https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074311/301_kq1lup", "https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074313/302_f2hhve", "https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074314/design-domain_mfr3tj"];
   const zairzest2Images = ["https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074311/201_umzmaq", "https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074311/202_ud8uut", "https://res.cloudinary.com/dzkuia4lg/image/upload/v1760074311/203_gjbusx"];
 
   return (
