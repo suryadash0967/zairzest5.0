@@ -168,7 +168,7 @@ function Profile() {
                     <div className="whatsapp-btn"><a href="https://chat.whatsapp.com/FTg4pC47NHgIvjtiniMolB?mode=ems_copy_t">JOIN WHATSAPP GROUP</a></div>
                     <div className="events-btn"><a href="/#events">EXPLORE EVENTS</a></div>
                     <div className="pay-btn"><a href="https://forms.gle/psXnSyou92JLi6s5A">Proceed To Payment</a></div>
-
+                    <div className="zen-btn"><a href="/#events">GET ZENCARD</a></div> {/* will be shown after both payment and manual review */}
                 </div>
                 <div className="note">Note: ZenCode is sent via your registered mail aswell</div>
             </div>

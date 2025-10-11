@@ -611,17 +611,19 @@ body {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 1rem;
+	margin-top: 3rem;
 }
 
 .whatsapp-btn,
 .events-btn,
-.pay-btn {
+.pay-btn,
+.zen-btn {
 	padding: 0.5rem 1rem;
 	font-family: Despina;
 	font-size: 25px;
 	cursor: pointer;
 	outline: none;
-	margin-top: 3rem;
+	/* margin-top: 3rem; */
 	letter-spacing: 1px;
 }
 
@@ -638,6 +640,11 @@ body {
 .pay-btn {
 	background-color: #00c853;
 	border: 2px solid #00c853;
+}
+
+.zen-btn {
+	background-color: #0021c8;
+	border: 2px solid #0021c8;
 }
 
 .note {
